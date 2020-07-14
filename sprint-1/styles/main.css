@@ -22,27 +22,22 @@
   font-display: swap;
 }
 
-html {
-  font-size: 16px;
-}
-
+html,
 body {
-  font-family: "AvenirNext LT Pro";
-  background: lightslategrey;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
-body h1 {
-  color: lightcyan;
-  font-weight: bold;
-}
-
-body h2 {
-  color: lightpink;
-  font-weight: normal;
-}
-
-body p {
-  color: whitesmoke;
-  font-weight: normal;
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 /*# sourceMappingURL=main.css.map */
