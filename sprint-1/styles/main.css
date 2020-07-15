@@ -104,6 +104,37 @@ body {
     cursor: pointer;
     border-bottom: 3px solid #ffffff;
   }
+  .nav .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url("../assets/images/dark-rider-JmVaNyemtN8-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #80323232;
+    width: 100%;
+    height: 183px;
+  }
+  .nav .hero__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    padding-left: 16px;
+  }
+  .nav .hero__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 24px;
+    line-height: 32px;
+    color: #ffffff;
+    width: 75%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -162,6 +193,39 @@ body {
     cursor: pointer;
     border-bottom: 3px solid #ffffff;
   }
+  .nav .hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+  }
+  .nav .hero__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    width: 80%;
+    padding-left: 24px;
+    border: 1px solid yellow;
+  }
+  .nav .hero__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 36px;
+    line-height: 44px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #ffffff;
+    width: 65%;
+    height: 50%;
+    border: 1px solid aqua;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -191,6 +255,32 @@ body {
     display: -ms-flexbox;
     display: flex;
     margin-right: 51px;
+  }
+  .nav .hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 670px;
+  }
+  .nav .hero__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    padding-left: 180px;
+  }
+  .nav .hero__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 60px;
+    line-height: 68px;
+    color: #ffffff;
+    width: 75%;
   }
 }
 /*# sourceMappingURL=main.css.map */

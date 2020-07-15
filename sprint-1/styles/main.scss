@@ -63,7 +63,30 @@ body {
         }
       }
     }
-  }
+    .hero {
+      display: flex;
+      background-image: url("../assets/images/dark-rider-JmVaNyemtN8-unsplash.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-color: $imageOverlay-color;
+      width: 100%;
+      height: 183px;
+      &__header {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding-left: 16px;
+      }
+      &__title {
+        display: flex;
+        font-size: 24px;
+        line-height: 32px;
+        color: $secondary-color;
+        width: 75%;
+      }
+    }
+  } //mobile-end //
   @include tablet {
     .navbar {
       display: flex;
@@ -105,7 +128,32 @@ body {
         }
       }
     }
-  }
+    .hero {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 400px;
+      &__header {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 80%;
+        padding-left: 24px;
+        border: 1px solid yellow;
+      }
+      &__title {
+        display: flex;
+        font-size: 36px;
+        line-height: 44px;
+        align-items: center;
+        color: $secondary-color;
+        width: 65%;
+        height: 50%;
+        border: 1px solid aqua;
+      }
+    }
+  } //tablet-end //
   @include desktop {
     .navbar {
       display: flex;
@@ -122,6 +170,26 @@ body {
       &__items {
         display: flex;
         margin-right: 51px;
+      }
+    }
+    .hero {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 670px;
+      &__header {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding-left: 180px;
+      }
+      &__title {
+        display: flex;
+        font-size: 60px;
+        line-height: 68px;
+        color: $secondary-color;
+        width: 75%;
       }
     }
   }
