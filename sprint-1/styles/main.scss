@@ -18,8 +18,6 @@ body {
   font-family: "AvenirNext LT Pro";
   scroll-behavior: smooth;
   width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
   margin: 0;
 }
 
@@ -185,6 +183,53 @@ body {
         color: $secondary-color;
         width: 75%;
       }
+    }
+  }
+}
+.main {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px dashed crimson;
+    &__musicians {
+      display: flex;
+      flex-direction: column;
+    }
+    &__about-musicians {
+      display: flex;
+      justify-content: center;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: bold;
+      margin-top: 32px;
+      margin-bottom: 24px;
+      border: 1px solid aqua;
+    }
+    &__band-members {
+      display: flex;
+      object-fit: contain;
+      width: 18rem;
+    }
+    &__quote {
+      display: flex;
+      // font-size: 13px;
+      // line-height: 18px
+      margin-top: 24px;
+      margin-bottom: 32px;
+    }
+    &__quote-author {
+      display: flex;
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &__bio {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
