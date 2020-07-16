@@ -247,11 +247,11 @@ body {
     }
     &__story {
       display: flex;
-      // font-size: 0.82rem;
-      // line-height: 1.12rem;
-      // width: 100%;
-      // margin-top: 0;
-      // margin-bottom: 0;
+      font-size: 0.82rem;
+      line-height: 1.12rem;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
       &--accent-pd {
         padding-right: 1.5rem;
       }
@@ -330,6 +330,7 @@ body {
         padding-bottom: 1.5rem;
       }
     }
+
     &__galary {
       display: flex;
       flex-direction: column;
@@ -372,6 +373,10 @@ body {
     }
     &__the-band {
       display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-left: 8%;
+      padding-right: 8%;
     }
     &__band-members {
       display: flex;
@@ -380,12 +385,80 @@ body {
       width: 896px;
       height: 450px;
     }
-    // &__quote {
+    &__quote {
+      display: flex;
+      margin-top: 3rem;
+      margin-bottom: 2.5rem;
+      width: 85%;
+    }
+    &__quote-author {
+      display: flex;
+      font-size: 0.875rem;
+      line-height: 1.37rem;
+      font-weight: bold;
+    }
+    &__bio {
+      width: 880px;
+      // width: 100%;
+      // padding-left: 8%;
+      margin-left: 8%;
+      margin-bottom: 3rem;
+      // padding-right: 1%;
+      border: 1px solid black;
+    }
+    &__bio-authors {
+      display: flex;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: bold;
+    }
+    &__articles {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 3rem;
+    }
+    &__story {
+      display: flex;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      // width: 95%;
+      width: 420px;
+      margin-top: 0;
+      margin-bottom: 0;
+      border: 1px solid crimson;
+      &--pd-right {
+        padding-right: 1.25rem;
+      }
+      &--pd-left {
+        padding-left: 1.25rem;
+      }
+    }
+
+    // &__galary {
     //   display: flex;
-    //   font-size: 1.5rem;
-    //   line-height: 2rem;
-    //   font-weight: bold;
-    //   width: 95%;
+    //   flex-direction: column;
     // }
+    &__galary-header {
+      display: flex;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: bold;
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+    &__photos {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      // align-content: ;
+    }
+    &__galary-img {
+      display: flex;
+      object-fit: contain;
+      // width: 14rem;
+      // height: 7.875rem;
+      width: 32%;
+      height: 19%;
+    }
   }
 }
