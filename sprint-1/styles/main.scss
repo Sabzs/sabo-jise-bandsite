@@ -272,8 +272,8 @@ body {
     &__galary-img {
       display: flex;
       object-fit: contain;
-      margin-bottom: 1.5rem;
-      width: 18rem;
+      margin-bottom: 1rem;
+      width: 100%;
     } //mobil ends//
   }
   @include tablet {
@@ -297,7 +297,6 @@ body {
       // height: 22.62rem;
       height: 362px;
       width: 100%;
-      // height: 20%;
     }
     &__quote {
       display: flex;
@@ -347,27 +346,20 @@ body {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      // align-content: ;
     }
     &__galary-img {
       display: flex;
       object-fit: contain;
-      width: 14rem;
-      height: 7.875rem;
+      margin-bottom: 1.5rem;
+      width: 30.435%;
+      height: 26%;
     }
   }
   @include desktop {
     padding-left: 180px;
     padding-right: 180px;
-    // &__musicians {
-    //   display: flex;
-    //   flex-direction: column;
-    // }
     &__about-musicians {
       display: flex;
-      // font-size: 2.25rem;
-      // line-height: 2.75rem;
-      // font-weight: bold;
       margin-top: 3rem;
       margin-bottom: 3rem;
     }
@@ -382,8 +374,8 @@ body {
       display: flex;
       justify-content: center;
       object-fit: cover;
-      width: 896px;
-      height: 450px;
+      width: 100%;
+      height: 28.125rem;
     }
     &__quote {
       display: flex;
@@ -399,11 +391,8 @@ body {
     }
     &__bio {
       width: 880px;
-      // width: 100%;
-      // padding-left: 8%;
       margin-left: 8%;
       margin-bottom: 3rem;
-      // padding-right: 1%;
       border: 1px solid black;
     }
     &__bio-authors {
@@ -421,8 +410,7 @@ body {
       display: flex;
       font-size: 0.875rem;
       line-height: 1.375rem;
-      // width: 95%;
-      width: 420px;
+      width: 47.86%;
       margin-top: 0;
       margin-bottom: 0;
       border: 1px solid crimson;
@@ -433,11 +421,6 @@ body {
         padding-left: 1.25rem;
       }
     }
-
-    // &__galary {
-    //   display: flex;
-    //   flex-direction: column;
-    // }
     &__galary-header {
       display: flex;
       font-size: 2.25rem;
@@ -450,14 +433,11 @@ body {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      // align-content: ;
     }
     &__galary-img {
       display: flex;
       object-fit: contain;
-      // width: 14rem;
-      // height: 7.875rem;
-      width: 32%;
+      width: 31.853%;
       height: 19%;
     }
   }
