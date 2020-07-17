@@ -104,13 +104,15 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-image: url("../assets/images/dark-rider-JmVaNyemtN8-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: #80323232;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .nav .hero__hero-img {
     width: 100%;
-    height: 11.43rem;
+    padding: 18.6% 0;
+    background-image: url("../assets/images/dark-rider-JmVaNyemtN8-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .nav .hero__header {
     display: -webkit-box;
@@ -130,6 +132,8 @@ body {
     line-height: 2rem;
     color: #ffffff;
     width: 75%;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -192,11 +196,15 @@ body {
     border-bottom: 3px solid #ffffff;
   }
   .nav .hero {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .nav .hero__hero-img {
     width: 100%;
-    height: 25rem;
+    padding: 17.06% 0;
   }
   .nav .hero__header {
     display: -webkit-box;
@@ -220,7 +228,7 @@ body {
             align-items: center;
     color: #ffffff;
     width: 90%;
-    height: 60%;
+    height: auto;
     margin-top: 0;
     margin-bottom: 0;
     border: 1px solid aqua;
@@ -260,8 +268,15 @@ body {
     margin-right: 3.5rem;
   }
   .nav .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .nav .hero__hero-img {
     width: 100%;
-    height: 670px;
+    padding: 18.48% 0;
   }
   .nav .hero__header {
     display: -webkit-box;
