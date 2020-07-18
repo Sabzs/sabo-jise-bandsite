@@ -61,18 +61,17 @@ body {
     }
     .hero {
       display: flex;
-      // max-width: 21.35;
-      // height: 183px;
+      max-width: 100%;
+      height: 62%;
       margin: 0 auto;
       &__hero-img {
         width: 100%;
-        padding: 18.6% 0;
+        padding-top: 18.6%;
+        padding-bottom: 18.6%;
         background-image: url("../assets/images/dark-rider-JmVaNyemtN8-unsplash.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        position: relative;
-        // background-color: $imageOverlay-color;
       }
       &__header {
         display: flex;
@@ -130,13 +129,12 @@ body {
     }
     .hero {
       display: flex;
-      max-width: 1440px;
+      max-width: 100%;
+      height: 62%;
       margin: 0 auto;
       &__hero-img {
         width: 100%;
         padding: 17.06% 0;
-        // background-color: $imageOverlay-color;
-        // border: 1px dashed cyan;
       }
       &__header {
         display: flex;
@@ -181,11 +179,12 @@ body {
     }
     .hero {
       display: flex;
-      max-width: 1440px;
+      max-width: 100%;
+      height: 62%;
       margin: 0 auto;
       &__hero-img {
         width: 100%;
-        padding: 18.48% 0;
+        padding: 18.475% 0;
       }
       &__header {
         display: flex;
