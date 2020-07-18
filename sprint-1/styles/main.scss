@@ -61,7 +61,8 @@ body {
     }
     .hero {
       display: flex;
-      max-width: 768px;
+      // max-width: 21.35;
+      // height: 183px;
       margin: 0 auto;
       &__hero-img {
         width: 100%;
@@ -69,6 +70,8 @@ body {
         background-image: url("../assets/images/dark-rider-JmVaNyemtN8-unsplash.jpg");
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
         // background-color: $imageOverlay-color;
       }
       &__header {
@@ -218,10 +221,24 @@ body {
       margin-top: 2rem;
       margin-bottom: 1.5rem;
     }
-    &__band-members {
+    &__the-band {
       display: flex;
-      object-fit: contain;
-      width: 18rem;
+      flex-direction: column;
+      width: 100%;
+    }
+    &__the-members {
+      display: flex;
+      width: 100%;
+      height: 66%;
+      // margin: 0 auto;
+    }
+    &__the-members-img {
+      width: 100%;
+      padding-top: 66%;
+      background-image: url("../assets/images/adults-audience-band-concert-167517.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     &__quote {
       display: flex;
@@ -263,8 +280,8 @@ body {
       width: 100%;
       margin-top: 0;
       margin-bottom: 0;
-      &--accent-pd {
-        padding-right: 1.5rem;
+      &--pd-right {
+        padding-bottom: 1.5rem;
       }
     }
     &__galary {
@@ -297,17 +314,21 @@ body {
       font-size: 2.25rem;
       line-height: 2.75rem;
       font-weight: bold;
-      // margin-top: 2rem;
-      // margin-bottom: 1.5rem;
     }
-    &__band-members {
+    &__the-band {
       display: flex;
-      justify-content: center;
-      object-fit: cover;
-      // width: 45rem;
-      // height: 22.62rem;
-      height: 362px;
+      flex-direction: column;
       width: 100%;
+    }
+    &__the-members {
+      display: flex;
+      width: 100%;
+      height: 66%;
+      // margin: 0 auto;
+    }
+    &__the-members-img {
+      width: 100%;
+      padding-top: 49.19%;
     }
     &__quote {
       display: flex;
@@ -322,6 +343,11 @@ body {
       line-height: 1.12rem;
       font-weight: bold;
     }
+    // &__bio {
+    //   width: 880px;
+    //   margin-left: 8%;
+    //   margin-bottom: 3rem;
+    // }
     &__bio-authors {
       display: flex;
       font-size: 1.5rem;
@@ -331,13 +357,21 @@ body {
     &__articles {
       display: flex;
       flex-direction: row;
+    }
+    &__story {
+      display: flex;
+      flex-direction: row;
       font-size: 0.82rem;
       line-height: 1.12rem;
       width: 100%;
       margin-top: 0;
       margin-bottom: 0;
-      &--left {
-        padding-bottom: 1.5rem;
+      &--pd-right {
+        padding-right: 12px;
+        padding-bottom: 0;
+      }
+      &--pd-left {
+        padding-left: 12px;
       }
     }
     &__galary {
@@ -380,12 +414,15 @@ body {
       padding-left: 8%;
       padding-right: 8%;
     }
-    &__band-members {
+    &__the-members {
       display: flex;
-      justify-content: center;
-      object-fit: cover;
       width: 100%;
-      height: 28.125rem;
+      height: 66%;
+      // margin: 0 auto;
+    }
+    &__the-members-img {
+      width: 100%;
+      padding-top: 49.61%;
     }
     &__quote {
       display: flex;
@@ -403,7 +440,6 @@ body {
       width: 880px;
       margin-left: 8%;
       margin-bottom: 3rem;
-      border: 1px solid black;
     }
     &__bio-authors {
       display: flex;
@@ -423,7 +459,6 @@ body {
       width: 47.86%;
       margin-top: 0;
       margin-bottom: 0;
-      border: 1px solid crimson;
       &--pd-right {
         padding-right: 1.25rem;
       }
@@ -450,5 +485,75 @@ body {
       width: 31.853%;
       height: 19%;
     }
+  }
+}
+.footer {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $primary-color;
+    color: $secondary-color;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+  }
+  &__header {
+    display: flex;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bolder;
+  }
+  &__icons {
+    display: flex;
+    width: 100%;
+    border: 1px solid yellow;
+  }
+  &__icon-img {
+    display: flex;
+
+    margin-right: 10%;
+    border: 1px solid lime;
+  }
+  &__logo-link {
+    display: none;
+  }
+  &__info-contact {
+    display: flex;
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+  &__name {
+    display: flex;
+    font-size: 0.875rem;
+    line-height: 1.37rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__company {
+    display: flex;
+    font-size: 0.812rem;
+    line-height: 1.12rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__address {
+    display: flex;
+    font-size: 0.812rem;
+    line-height: 1.12rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__email {
+    display: flex;
+    font-size: 0.812rem;
+    line-height: 1.12rem;
   }
 }
