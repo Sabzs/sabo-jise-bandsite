@@ -1,26 +1,50 @@
+// @font-face {
+//   font-family: "AvenirNext LT Pro";
+//   src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"),
+//     url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+//   font-weight: bold;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: "AvenirNext LT Pro";
+//   src: url("../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"),
+//     url("../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: "AvenirNext LT Pro";
+//   src: url("../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"),
+//     url("../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+//   font-weight: bold;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
 @font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"),
-    url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  font-family: "Linotype";
+  src: url("../assets/fonts/Linotype-AvenirNextLTPro-Bold.otf");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"),
-    url("../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  font-family: "Linotype";
+  src: url("../assets/fonts/Linotype-AvenirNextLTPro-Demi.otf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"),
-    url("../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: bold;
+  font-family: "Linotype";
+  src: url("../assets/fonts/Linotype-AvenirNextLTPro-Regular.otf");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }

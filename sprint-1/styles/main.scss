@@ -1,28 +1,19 @@
+@import "./partials/reset";
 @import "./partials/variables";
 @import "./partials/mixins";
 @import "./partials/fonts";
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 body {
   font-size: 16px;
-  font-family: "AvenirNext LT Pro";
+  font-family: "Linotype";
   scroll-behavior: smooth;
   width: 100%;
-  margin: 0;
+  // margin: 0;
 }
 
 .nav {
   @include mobile {
+    // font-family: "Linotype-AvenirNextLTPro";
     .navbar {
       display: flex;
       flex-direction: column;
@@ -52,10 +43,11 @@ body {
         list-style-type: none;
         font-size: 0.81rem;
         line-height: 1.12rem;
+        font-weight: bold;
         width: 160px;
         &:hover {
           cursor: pointer;
-          border-bottom: 3px solid $secondary-color;
+          border-bottom: 4px solid $secondary-color;
         }
       }
     }
@@ -91,6 +83,7 @@ body {
     } //mobile-end //
   }
   @include tablet {
+    // font-family: "Linotype-AvenirNextLTPro";
     .navbar {
       display: flex;
       flex-direction: row;
@@ -157,6 +150,7 @@ body {
     } //tablet-end //
   }
   @include desktop {
+    // font-family: "Linotype-AvenirNextLTPro";
     .navbar {
       display: flex;
       width: 100%;
