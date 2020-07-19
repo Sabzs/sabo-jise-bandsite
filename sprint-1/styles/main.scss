@@ -153,7 +153,6 @@ body {
         height: auto;
         margin-top: 0;
         margin-bottom: 0;
-        border: 1px solid aqua;
       }
     } //tablet-end //
   }
@@ -493,66 +492,217 @@ body {
     width: 100%;
     background-color: $primary-color;
     color: $secondary-color;
-  }
-  &__info {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    width: 100%;
-  }
-  &__header {
-    display: flex;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: bolder;
-  }
-  &__icons {
-    display: flex;
-    width: 100%;
-    border: 1px solid yellow;
-  }
-  &__icon-img {
-    display: flex;
+    &__info {
+      display: flex;
+      flex-direction: column;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      width: 100%;
+    }
+    &__info-content {
+      display: flex;
+      flex-direction: column;
+    }
+    &__header {
+      display: flex;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: bolder;
+    }
+    &__icons {
+      display: flex;
+      width: 100%;
+      margin-bottom: 8%;
+    }
+    &__icon-img {
+      display: flex;
 
-    margin-right: 10%;
-    border: 1px solid lime;
+      margin-right: 10%;
+    }
+    &__logo-link {
+      display: none;
+    }
+    &__info-contact {
+      display: flex;
+    }
+    &__details {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 8%;
+    }
+    &__name {
+      display: flex;
+      font-size: 0.875rem;
+      line-height: 1.37rem;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &__company {
+      display: flex;
+      font-size: 0.812rem;
+      line-height: 1.12rem;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &__address-cont {
+      display: flex;
+      flex-direction: column;
+      margin-top: 7%;
+      margin-bottom: 7%;
+    }
+    &__address {
+      display: flex;
+      font-size: 0.812rem;
+      line-height: 1.12rem;
+      margin-top: 0%;
+      margin-bottom: 0;
+    }
+    &__email {
+      display: flex;
+      font-size: 0.812rem;
+      line-height: 1.12rem;
+      margin-top: 0%;
+      margin-bottom: 0;
+    }
+    &__copyright {
+      display: flex;
+      font-size: 0.812rem;
+      line-height: 1.12rem;
+      width: 70%;
+      padding-left: 5%;
+      margin-top: 0%;
+      padding-bottom: 5%;
+    }
   }
-  &__logo-link {
-    display: none;
-  }
-  &__info-contact {
+  @include tablet {
     display: flex;
+    padding-top: 5%;
+    // &__info {
+    //   display: flex;
+    //   flex-direction: column;
+    // }
+    &__info-content {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+    }
+    &__header {
+      display: flex;
+      font-size: 36px;
+      line-height: 44px;
+      width: 30%;
+      margin-top: 0%;
+      margin-bottom: 0;
+    }
+    &__icons {
+      display: flex;
+      justify-content: space-evenly;
+      width: 30%;
+      margin-top: 0%;
+      margin-bottom: 0;
+    }
+    &__icon-img {
+      display: flex;
+      margin-right: 0%;
+    }
+    &__logo-link {
+      display: flex;
+      justify-content: flex-end;
+      width: 30%;
+    }
+    &__details {
+      display: flex;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      margin-bottom: 0;
+    }
+    &__name {
+      display: flex;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &__company {
+      display: flex;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &__address {
+      display: flex;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      margin-top: 0%;
+      margin-bottom: 0;
+    }
+    &__email {
+      display: flex;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      margin-top: 0%;
+      margin-bottom: 0;
+    }
+    &__copyright {
+      display: flex;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      width: 70%;
+      padding-left: 2%;
+      margin-top: 0%;
+      padding-bottom: 5%;
+    }
   }
-  &__details {
-    display: flex;
-    flex-direction: column;
-  }
-  &__name {
-    display: flex;
-    font-size: 0.875rem;
-    line-height: 1.37rem;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  &__company {
-    display: flex;
-    font-size: 0.812rem;
-    line-height: 1.12rem;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  &__address {
-    display: flex;
-    font-size: 0.812rem;
-    line-height: 1.12rem;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  &__email {
-    display: flex;
-    font-size: 0.812rem;
-    line-height: 1.12rem;
+  @include desktop {
+    margin-top: 3rem;
+    padding-left: 11.25rem;
+    padding-right: 11.25rem;
+    &__info {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__info-content {
+      display: flex;
+      justify-content: start;
+      width: 100%;
+    }
+    &__header {
+      width: 25%;
+    }
+    &__icons {
+      display: flex;
+      width: 25%;
+      justify-content: start;
+    }
+    &__icon-img {
+      margin-right: 32px;
+    }
+    &__logo-link {
+      width: 50%;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    &__logo {
+      width: 120px;
+      height: 24px;
+    }
+    &__details {
+      display: flex;
+      width: 25%;
+      justify-content: none;
+    }
+    &__address-cont {
+      margin-top: 7%;
+      margin-bottom: 7%;
+    }
+    &__copyright {
+      padding-left: 0;
+    }
   }
 }
