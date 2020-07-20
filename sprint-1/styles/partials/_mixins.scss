@@ -86,7 +86,10 @@
   &__email {
     display: flex;
     @include fonts(0.81rem, 1.12rem, normal);
-    @include margin-reset;
+    text-decoration: none;
+    list-style-type: none;
+    color: $secondary-color;
+    cursor: pointer;
   }
 }
 
@@ -106,5 +109,9 @@
   &__email {
     display: flex;
     @include fonts(0.875rem, 1.25rem, normal);
+    text-decoration: none;
+    list-style-type: none;
+    color: $secondary-color;
+    cursor: pointer;
   }
 }
