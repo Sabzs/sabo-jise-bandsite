@@ -40,13 +40,7 @@ body {
         width: 160px;
         &:hover {
           cursor: pointer;
-          // color: #e5fff6;
-          // color: #c5ffeb;
-          // color: #f1a1b1;
-          // color: #e86681;
           color: #e34061;
-          // color: #e02b4f;
-
           border-bottom: 4px solid $secondary-color;
         }
       }
@@ -185,7 +179,6 @@ body {
     }
   }
 }
-
 .main {
   @include mobile {
     @include flexDirection(column);

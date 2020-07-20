@@ -37,7 +37,7 @@
   font-weight: $weight;
 }
 
-// Flex mixins
+// Flexbox mixins //
 @mixin flexDirection($direction) {
   display: flex;
   flex-direction: $direction;
