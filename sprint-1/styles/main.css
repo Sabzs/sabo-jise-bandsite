@@ -408,8 +408,8 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 0.81rem;
-    line-height: 1.12rem;
+    font-size: 0.875rem;
+    line-height: 1.37rem;
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
@@ -451,6 +451,7 @@ body {
     display: flex;
     font-size: 0.81rem;
     line-height: 1.12rem;
+    font-weight: normal;
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
@@ -473,9 +474,11 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
-    font-weight: bold;
   }
   .main__photos {
     display: -webkit-box;
@@ -571,6 +574,7 @@ body {
             flex-direction: row;
     font-size: 0.875rem;
     line-height: 1.375rem;
+    font-weight: normal;
     width: 100%;
   }
   .main__story--pd-right {
@@ -604,11 +608,11 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .main__galary-img {
     display: -webkit-box;
@@ -701,7 +705,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     font-size: 0.875rem;
-    line-height: 1.375rem;
+    line-height: 1.37rem;
+    font-weight: normal;
     width: 47.86%;
   }
   .main__story--pd-right {
@@ -719,17 +724,6 @@ body {
     font-weight: bold;
     margin-top: 3rem;
     margin-bottom: 4rem;
-  }
-  .main__photos {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   .main__galary-img {
     display: -webkit-box;

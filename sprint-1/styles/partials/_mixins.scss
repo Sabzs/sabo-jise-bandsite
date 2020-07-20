@@ -55,6 +55,11 @@
   justify-content: $justify;
   align-items: $align;
 }
+@mixin flexwrap-rowJustify {
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
 //footer DETAILS-SECTION //
 @mixin details-contents-mobile {

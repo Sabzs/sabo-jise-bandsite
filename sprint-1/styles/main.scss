@@ -13,8 +13,6 @@ body {
 .nav {
   @include mobile {
     .navbar {
-      // display: flex;
-      // flex-direction: column;
       @include flexDirection(column);
       width: 100%;
       height: 5rem;
@@ -29,8 +27,6 @@ body {
         display: flex;
       }
       &__list {
-        // display: flex;
-        // justify-content: center;
         @include flex-justify(center);
         height: 65%;
         padding-left: 0;
@@ -38,12 +34,8 @@ body {
         padding-top: 16px;
       }
       &__items {
-        // display: flex;
-        // justify-content: center;
         @include flex-justify(center);
         list-style-type: none;
-        // font-size: 0.81rem;
-        // line-height: 1.12rem;
         @include fonts(0.81rem, 1.12rem, normal);
         width: 160px;
         &:hover {
@@ -89,7 +81,7 @@ body {
         width: 75%;
         @include margin-reset;
       }
-    } //mobile-end //
+    }
   }
   @include tablet {
     .navbar {
@@ -144,7 +136,7 @@ body {
         width: 95%;
         height: auto;
       }
-    } //tablet-end //
+    }
   }
   @include desktop {
     .navbar {
@@ -180,36 +172,29 @@ body {
       }
       &__title {
         display: flex;
-        // font-size: 3.75rem;
-        // line-height: 4.25rem;
         color: $secondary-color;
         width: 60%;
       }
     }
   }
-} //nav ends //
+}
 
 .main {
   @include mobile {
-    display: flex;
-    flex-direction: column;
+    @include flexDirection(column);
     padding-left: 1rem;
     padding-right: 1rem;
     &__musicians {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
     }
     &__about-musicians {
       display: flex;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-weight: bold;
+      @include fonts(1.5rem, 2rem, bold);
       margin-top: 2rem;
       margin-bottom: 1.5rem;
     }
     &__the-band {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
       width: 100%;
     }
     &__the-members {
@@ -227,41 +212,32 @@ body {
     }
     &__quote {
       display: flex;
-      font-size: 0.875rem;
-      line-height: 1.37rem;
-      font-weight: bold;
+      @include fonts(0.875rem, 1.37rem, bold);
       margin-top: 1.5rem;
       margin-bottom: 2rem;
       width: 90%;
     }
     &__quote-author {
       display: flex;
-      font-size: 0.81rem;
-      line-height: 1.12rem;
-      font-weight: bold;
+      @include fonts(0.875rem, 1.37rem, bold);
       @include margin-reset;
     }
     &__bio {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
       margin-bottom: 2.5rem;
     }
     &__bio-authors {
       display: flex;
-      font-size: 0.875rem;
-      line-height: 1.37rem;
-      font-weight: bold;
+      @include fonts(0.875rem, 1.37rem, bold);
       margin-top: 2.5rem;
       margin-bottom: 1.5rem;
     }
     &__articles {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
     }
     &__story {
       display: flex;
-      font-size: 0.81rem;
-      line-height: 1.12rem;
+      @include fonts(0.81rem, 1.12rem, normal);
       width: 100%;
       @include margin-reset;
       &--pd-right {
@@ -269,40 +245,31 @@ body {
       }
     }
     &__galary {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
     }
     &__galary-header {
       display: flex;
+      @include fonts(1.5rem, 2rem, bold);
       margin-top: 1.5rem;
       margin-bottom: 2rem;
-      font-weight: bold;
     }
     &__photos {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
     }
     &__galary-img {
       display: flex;
       object-fit: contain;
       margin-bottom: 1rem;
       width: 100%;
-    } //mobil ends//
+    }
   }
   @include tablet {
-    // &__musicians {
-    //   display: flex;
-    //   flex-direction: column;
-    // }
     &__about-musicians {
       display: flex;
-      font-size: 2.25rem;
-      line-height: 2.75rem;
-      font-weight: bold;
+      @include fonts(2.25rem, 2.75rem, bold);
     }
     &__the-band {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
       width: 100%;
     }
     &__the-members {
@@ -317,9 +284,7 @@ body {
     }
     &__quote {
       display: flex;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-weight: bold;
+      @include fonts(1.5rem, 2rem, bold);
       width: 95%;
     }
     &__quote-author {
@@ -327,26 +292,16 @@ body {
       font-size: 1rem;
       line-height: 1.5rem;
     }
-    // &__bio {
-    //   width: 880px;
-    //   margin-left: 8%;
-    //   margin-bottom: 3rem;
-    // }
     &__bio-authors {
       display: flex;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-weight: bold;
+      @include fonts(1.5rem, 2rem, bold);
     }
     &__articles {
-      display: flex;
-      flex-direction: row;
+      @include flexDirection(row);
     }
     &__story {
-      display: flex;
-      flex-direction: row;
-      font-size: 0.875rem;
-      line-height: 1.375rem;
+      @include flexDirection(row);
+      @include fonts(0.875rem, 1.375rem, normal);
       width: 100%;
       &--pd-right {
         padding-right: 12px;
@@ -357,21 +312,16 @@ body {
       }
     }
     &__galary {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
     }
     &__galary-header {
       display: flex;
-      font-size: 2.25rem;
-      line-height: 2.75rem;
-      font-weight: bold;
+      @include fonts(2.25rem, 2.75rem, bold);
       margin-top: 2rem;
       margin-bottom: 1.5rem;
     }
     &__photos {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      @include flexwrap-rowJustify;
     }
     &__galary-img {
       display: flex;
@@ -390,8 +340,7 @@ body {
       margin-bottom: 3rem;
     }
     &__the-band {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
       width: 100%;
       padding-left: 8%;
       padding-right: 8%;
@@ -413,9 +362,7 @@ body {
     }
     &__quote-author {
       display: flex;
-      font-size: 0.875rem;
-      line-height: 1.37rem;
-      font-weight: bold;
+      @include fonts(0.875rem, 1.37rem, bold);
     }
     &__bio {
       width: 880px;
@@ -424,19 +371,15 @@ body {
     }
     &__bio-authors {
       display: flex;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-weight: bold;
+      @include fonts(1.5rem, 2rem, bold);
     }
     &__articles {
-      display: flex;
-      flex-direction: row;
+      @include flexDirection(row);
       margin-bottom: 3rem;
     }
     &__story {
       display: flex;
-      font-size: 0.875rem;
-      line-height: 1.375rem;
+      @include fonts(0.875rem, 1.37rem, normal);
       width: 47.86%;
       &--pd-right {
         padding-right: 1.25rem;
@@ -447,16 +390,9 @@ body {
     }
     &__galary-header {
       display: flex;
-      font-size: 2.25rem;
-      line-height: 2.75rem;
-      font-weight: bold;
+      @include fonts(2.25rem, 2.75rem, bold);
       margin-top: 3rem;
       margin-bottom: 4rem;
-    }
-    &__photos {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
     }
     &__galary-img {
       display: flex;
@@ -499,9 +435,7 @@ body {
     &__logo-link {
       display: none;
     }
-    // &__info-contact {
-    //   display: flex;
-    // }
+
     &__details {
       @include flexDirection(column);
       margin-bottom: 8%;
