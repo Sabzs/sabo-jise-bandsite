@@ -14,23 +14,16 @@
     @content;
   }
 }
-@mixin padding-reset-tb {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-@mixin padding-reset-ltrt {
-  padding-left: 0;
-  padding-right: 0;
-}
-@mixin margin-reset-tb {
+
+@mixin margin-reset {
   margin-top: 0;
   margin-bottom: 0;
-}
-@mixin margin-reset-ltrt {
   margin-left: 0;
   margin-right: 0;
 }
-@mixin margin-padding {
-  margin: 0;
-  padding: 0;
+@mixin padding-reset {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }

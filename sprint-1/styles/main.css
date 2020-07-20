@@ -157,6 +157,8 @@ body {
     width: 75%;
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -253,8 +255,6 @@ body {
     color: #ffffff;
     width: 95%;
     height: auto;
-    margin-top: 0;
-    margin-bottom: 0;
   }
 }
 
@@ -397,6 +397,8 @@ body {
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   .main__bio {
     display: -webkit-box;
@@ -436,6 +438,8 @@ body {
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   .main__story--pd-right {
     padding-bottom: 1.5rem;
@@ -502,6 +506,7 @@ body {
     display: flex;
     width: 100%;
     height: 66%;
+    margin: 0 auto;
   }
   .main__the-members-img {
     width: 100%;
@@ -551,8 +556,6 @@ body {
     font-size: 0.875rem;
     line-height: 1.375rem;
     width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
   }
   .main__story--pd-right {
     padding-right: 12px;
@@ -684,8 +687,6 @@ body {
     font-size: 0.875rem;
     line-height: 1.375rem;
     width: 47.86%;
-    margin-top: 0;
-    margin-bottom: 0;
   }
   .main__story--pd-right {
     padding-right: 1.25rem;
@@ -783,11 +784,6 @@ body {
   .footer__logo-link {
     display: none;
   }
-  .footer__info-contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .footer__details {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -817,6 +813,8 @@ body {
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   .footer__address-cont {
     display: -webkit-box;
@@ -835,8 +833,10 @@ body {
     display: flex;
     font-size: 0.81rem;
     line-height: 1.12rem;
-    margin-top: 0%;
+    margin-top: 0;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   .footer__email {
     display: -webkit-box;
@@ -844,8 +844,10 @@ body {
     display: flex;
     font-size: 0.81rem;
     line-height: 1.12rem;
-    margin-top: 0%;
+    margin-top: 0;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   .footer__copyright {
     display: -webkit-box;
@@ -887,8 +889,10 @@ body {
     font-size: 36px;
     line-height: 44px;
     width: 30%;
-    margin-top: 0%;
+    margin-top: 0;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   .footer__icons {
     display: -webkit-box;
@@ -898,8 +902,10 @@ body {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     width: 30%;
-    margin-top: 0%;
+    margin-top: 0;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   .footer__icon-img {
     display: -webkit-box;
@@ -931,8 +937,6 @@ body {
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0;
   }
   .footer__company {
     display: -webkit-box;
@@ -941,8 +945,6 @@ body {
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0;
   }
   .footer__address {
     display: -webkit-box;
@@ -950,8 +952,6 @@ body {
     display: flex;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    margin-top: 0%;
-    margin-bottom: 0;
   }
   .footer__email {
     display: -webkit-box;
@@ -959,8 +959,6 @@ body {
     display: flex;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    margin-top: 0%;
-    margin-bottom: 0;
   }
   .footer__copyright {
     display: -webkit-box;
@@ -982,6 +980,8 @@ body {
     padding-right: 11.25rem;
   }
   .footer__info {
+    padding-top: 0;
+    padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
   }
@@ -1001,22 +1001,22 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 25%;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+    width: 25%;
   }
   .footer__icon-img {
     margin-right: 32px;
   }
   .footer__logo-link {
     width: 50%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .footer__logo {
     width: 120px;
@@ -1026,10 +1026,10 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 25%;
     -webkit-box-pack: none;
         -ms-flex-pack: none;
             justify-content: none;
+    width: 25%;
   }
   .footer__address-cont {
     margin-top: 7%;

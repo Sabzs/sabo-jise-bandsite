@@ -62,7 +62,6 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-
         &::before {
           content: "";
           position: absolute;
@@ -87,8 +86,7 @@ body {
         font-weight: bold;
         color: $secondary-color;
         width: 75%;
-        margin-top: 0;
-        margin-bottom: 0;
+        @include margin-reset;
       }
     } //mobile-end //
   }
@@ -153,8 +151,7 @@ body {
         color: $secondary-color;
         width: 95%;
         height: auto;
-        margin-top: 0;
-        margin-bottom: 0;
+        // @include margin-reset;
       }
     } //tablet-end //
   }
@@ -244,7 +241,6 @@ body {
       font-size: 0.875rem;
       line-height: 1.37rem;
       font-weight: bold;
-      // word-spacing: 3%;
       margin-top: 1.5rem;
       margin-bottom: 2rem;
       width: 90%;
@@ -254,8 +250,7 @@ body {
       font-size: 0.81rem;
       line-height: 1.12rem;
       font-weight: bold;
-      margin-top: 0;
-      margin-bottom: 0;
+      @include margin-reset;
     }
     &__bio {
       display: flex;
@@ -279,8 +274,7 @@ body {
       font-size: 0.81rem;
       line-height: 1.12rem;
       width: 100%;
-      margin-top: 0;
-      margin-bottom: 0;
+      @include margin-reset;
       &--pd-right {
         padding-bottom: 1.5rem;
       }
@@ -326,7 +320,7 @@ body {
       display: flex;
       width: 100%;
       height: 66%;
-      // margin: 0 auto;
+      margin: 0 auto;
     }
     &__the-members-img {
       width: 100%;
@@ -343,7 +337,6 @@ body {
       display: flex;
       font-size: 1rem;
       line-height: 1.5rem;
-      // font-weight: 500;
     }
     // &__bio {
     //   width: 880px;
@@ -366,8 +359,6 @@ body {
       font-size: 0.875rem;
       line-height: 1.375rem;
       width: 100%;
-      margin-top: 0;
-      margin-bottom: 0;
       &--pd-right {
         padding-right: 12px;
         padding-bottom: 0;
@@ -420,7 +411,6 @@ body {
       display: flex;
       width: 100%;
       height: 66%;
-      // margin: 0 auto;
     }
     &__the-members-img {
       width: 100%;
@@ -459,8 +449,6 @@ body {
       font-size: 0.875rem;
       line-height: 1.375rem;
       width: 47.86%;
-      margin-top: 0;
-      margin-bottom: 0;
       &--pd-right {
         padding-right: 1.25rem;
       }
@@ -520,15 +508,14 @@ body {
     }
     &__icon-img {
       display: flex;
-
       margin-right: 10%;
     }
     &__logo-link {
       display: none;
     }
-    &__info-contact {
-      display: flex;
-    }
+    // &__info-contact {
+    //   display: flex;
+    // }
     &__details {
       display: flex;
       flex-direction: column;
@@ -547,8 +534,7 @@ body {
       font-size: 0.81rem;
       line-height: 1.12rem;
       font-weight: bold;
-      margin-top: 0;
-      margin-bottom: 0;
+      @include margin-reset;
     }
     &__address-cont {
       display: flex;
@@ -560,15 +546,13 @@ body {
       display: flex;
       font-size: 0.81rem;
       line-height: 1.12rem;
-      margin-top: 0%;
-      margin-bottom: 0;
+      @include margin-reset;
     }
     &__email {
       display: flex;
       font-size: 0.81rem;
       line-height: 1.12rem;
-      margin-top: 0%;
-      margin-bottom: 0;
+      @include margin-reset;
     }
     &__copyright {
       display: flex;
@@ -598,15 +582,13 @@ body {
       font-size: 36px;
       line-height: 44px;
       width: 30%;
-      margin-top: 0%;
-      margin-bottom: 0;
+      @include margin-reset;
     }
     &__icons {
       display: flex;
       justify-content: space-evenly;
       width: 30%;
-      margin-top: 0%;
-      margin-bottom: 0;
+      @include margin-reset;
     }
     &__icon-img {
       display: flex;
@@ -628,30 +610,22 @@ body {
       font-size: 0.875rem;
       line-height: 1.25rem;
       font-weight: bold;
-      margin-top: 0;
-      margin-bottom: 0;
     }
     &__company {
       display: flex;
       font-size: 0.875rem;
       line-height: 1.25rem;
       font-weight: bold;
-      margin-top: 0;
-      margin-bottom: 0;
     }
     &__address {
       display: flex;
       font-size: 0.875rem;
       line-height: 1.25rem;
-      margin-top: 0%;
-      margin-bottom: 0;
     }
     &__email {
       display: flex;
       font-size: 0.875rem;
       line-height: 1.25rem;
-      margin-top: 0%;
-      margin-bottom: 0;
     }
     &__copyright {
       display: flex;
@@ -668,8 +642,7 @@ body {
     padding-left: 11.25rem;
     padding-right: 11.25rem;
     &__info {
-      padding-left: 0;
-      padding-right: 0;
+      @include padding-reset;
     }
     &__info-content {
       display: flex;
@@ -681,16 +654,16 @@ body {
     }
     &__icons {
       display: flex;
-      width: 25%;
       justify-content: start;
+      width: 25%;
     }
     &__icon-img {
       margin-right: 32px;
     }
     &__logo-link {
       width: 50%;
-      align-items: center;
       justify-content: flex-end;
+      align-items: center;
     }
     &__logo {
       width: 120px;
@@ -698,8 +671,8 @@ body {
     }
     &__details {
       display: flex;
-      width: 25%;
       justify-content: none;
+      width: 25%;
     }
     &__address-cont {
       margin-top: 7%;
