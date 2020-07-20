@@ -13,8 +13,9 @@ body {
 .nav {
   @include mobile {
     .navbar {
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
+      @include flexDirection(column);
       width: 100%;
       height: 5rem;
       padding-top: 3%;
@@ -28,19 +29,22 @@ body {
         display: flex;
       }
       &__list {
-        display: flex;
-        justify-content: center;
+        // display: flex;
+        // justify-content: center;
+        @include flex-justify(center);
         height: 65%;
         padding-left: 0;
         margin: 0;
         padding-top: 16px;
       }
       &__items {
-        display: flex;
-        justify-content: center;
+        // display: flex;
+        // justify-content: center;
+        @include flex-justify(center);
         list-style-type: none;
-        font-size: 0.81rem;
-        line-height: 1.12rem;
+        // font-size: 0.81rem;
+        // line-height: 1.12rem;
+        @include fonts(0.81rem, 1.12rem, normal);
         width: 160px;
         &:hover {
           cursor: pointer;
@@ -74,16 +78,13 @@ body {
         }
       }
       &__header {
-        display: flex;
-        align-items: center;
+        @include flex-alignItems(center);
         height: 100%;
         padding-left: 1rem;
       }
       &__title {
         display: flex;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        font-weight: bold;
+        @include fonts(1.5rem, 2rem, bold);
         color: $secondary-color;
         width: 75%;
         @include margin-reset;
@@ -92,8 +93,7 @@ body {
   }
   @include tablet {
     .navbar {
-      display: flex;
-      flex-direction: row;
+      @include flexDirection(row);
       width: 100%;
       height: 5rem;
       padding-top: 0;
@@ -105,19 +105,14 @@ body {
         display: flex;
       }
       &__list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-justifyAlign(center, center);
         height: 100%;
         width: 30%;
         padding-top: 0;
       }
       &__items {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        font-size: 0.875rem;
-        line-height: 1.375rem;
+        @include flex-justifyAlign(flex-end, center);
+        @include fonts(0.875rem, 1.375rem, normal);
         width: 5rem;
         height: 100%;
         margin-right: 5%;
@@ -137,21 +132,17 @@ body {
         padding: 17.06% 0;
       }
       &__header {
-        display: flex;
-        align-items: center;
+        @include flex-justifyAlign(none, center);
         height: 100%;
         width: 80%;
         padding-left: 1.5rem;
       }
       &__title {
-        display: flex;
-        font-size: 3.75rem;
-        line-height: 4.25rem;
-        align-items: center;
+        @include flex-alignItems(center);
+        @include fonts(3.75rem, 4.25rem, bold);
         color: $secondary-color;
         width: 95%;
         height: auto;
-        // @include margin-reset;
       }
     } //tablet-end //
   }
@@ -166,12 +157,10 @@ body {
         margin-right: 3.5rem;
       }
       &__list {
-        display: flex;
-        justify-content: flex-start;
+        @include flex-justify(flex-start);
       }
       &__items {
-        display: flex;
-        justify-content: flex-start;
+        @include flex-justify(flex-start);
         margin-right: 3.5rem;
       }
     }
@@ -185,8 +174,7 @@ body {
         padding: 18.475% 0;
       }
       &__header {
-        display: flex;
-        align-items: center;
+        @include flex-alignItems(center);
         height: 100%;
         padding-left: 11.25rem;
       }
@@ -199,7 +187,8 @@ body {
       }
     }
   }
-}
+} //nav ends //
+
 .main {
   @include mobile {
     display: flex;
@@ -517,31 +506,8 @@ body {
       @include flexDirection(column);
       margin-bottom: 8%;
     }
-    &__name {
-      display: flex;
-      @include fonts(0.81rem, 1.12rem, bold);
-      @include margin-reset;
-    }
-    &__company {
-      display: flex;
-      @include fonts(0.81rem, 1.12rem, bold);
-      @include margin-reset;
-    }
-    &__address-cont {
-      @include flexDirection(column);
-      margin-top: 5%;
-      margin-bottom: 5%;
-    }
-    &__address {
-      display: flex;
-      @include fonts(0.81rem, 1.12rem, normal);
-      @include margin-reset;
-    }
-    &__email {
-      display: flex;
-      @include fonts(0.81rem, 1.12rem, normal);
-      @include margin-reset;
-    }
+    @include details-contents-mobile;
+
     &__copyright {
       display: flex;
       @include fonts(0.81rem, 1.12rem, normal);
@@ -554,10 +520,6 @@ body {
   @include tablet {
     display: flex;
     padding-top: 5%;
-    // &__info {
-    //   display: flex;
-    //   flex-direction: column;
-    // }
     &__info-content {
       @include flexDirection(row);
       justify-content: space-between;
@@ -589,22 +551,8 @@ body {
       padding-bottom: 5%;
       margin-bottom: 0;
     }
-    &__name {
-      display: flex;
-      @include fonts(0.875rem, 1.25rem, bold);
-    }
-    &__company {
-      display: flex;
-      @include fonts(0.875rem, 1.25rem, bold);
-    }
-    &__address {
-      display: flex;
-      @include fonts(0.875rem, 1.25rem, normal);
-    }
-    &__email {
-      display: flex;
-      @include fonts(0.875rem, 1.25rem, normal);
-    }
+    @include details-contents-tablet;
+
     &__copyright {
       display: flex;
       @include fonts(0.875rem, 1.25rem, normal);
@@ -624,14 +572,11 @@ body {
     &__info-content {
       @include flex-justify(start);
       width: 100%;
-      border: 1px solid red;
     }
     &__header {
       width: 25%;
     }
     &__icons {
-      display: flex;
-      justify-content: start;
       @include flex-justify(start);
       width: 25%;
     }
@@ -648,8 +593,6 @@ body {
       height: 24px;
     }
     &__details {
-      display: flex;
-      justify-content: none;
       @include flex-justify(none);
       width: 25%;
     }

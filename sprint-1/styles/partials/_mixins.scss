@@ -1,3 +1,4 @@
+//various breakpoints //
 @mixin tablet {
   @media (min-width: $tablet-breakpoint) {
     @content;
@@ -15,6 +16,7 @@
   }
 }
 
+// various TAGS resets //
 @mixin margin-reset {
   margin-top: 0;
   margin-bottom: 0;
@@ -27,11 +29,15 @@
   padding-left: 0;
   padding-right: 0;
 }
+
+// Fonts mixins  //
 @mixin fonts($size, $line-height, $weight) {
   font-size: $size;
   line-height: $line-height;
   font-weight: $weight;
 }
+
+// Flex mixins
 @mixin flexDirection($direction) {
   display: flex;
   flex-direction: $direction;
@@ -39,4 +45,61 @@
 @mixin flex-justify($justify) {
   display: flex;
   justify-content: $justify;
+}
+@mixin flex-alignItems($align) {
+  display: flex;
+  align-items: $align;
+}
+@mixin flex-justifyAlign($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+//footer DETAILS-SECTION //
+@mixin details-contents-mobile {
+  &__name {
+    display: flex;
+    @include fonts(0.81rem, 1.12rem, bold);
+    @include margin-reset;
+  }
+  &__company {
+    display: flex;
+    @include fonts(0.81rem, 1.12rem, bold);
+    @include margin-reset;
+  }
+  &__address-cont {
+    @include flexDirection(column);
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  &__address {
+    display: flex;
+    @include fonts(0.81rem, 1.12rem, normal);
+    @include margin-reset;
+  }
+  &__email {
+    display: flex;
+    @include fonts(0.81rem, 1.12rem, normal);
+    @include margin-reset;
+  }
+}
+
+@mixin details-contents-tablet {
+  &__name {
+    display: flex;
+    @include fonts(0.875rem, 1.25rem, bold);
+  }
+  &__company {
+    display: flex;
+    @include fonts(0.875rem, 1.25rem, bold);
+  }
+  &__address {
+    display: flex;
+    @include fonts(0.875rem, 1.25rem, normal);
+  }
+  &__email {
+    display: flex;
+    @include fonts(0.875rem, 1.25rem, normal);
+  }
 }

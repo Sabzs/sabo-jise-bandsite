@@ -112,6 +112,7 @@ body {
     list-style-type: none;
     font-size: 0.81rem;
     line-height: 1.12rem;
+    font-weight: normal;
     width: 160px;
   }
   .nav .navbar__items:hover {
@@ -222,6 +223,7 @@ body {
             align-items: center;
     font-size: 0.875rem;
     line-height: 1.375rem;
+    font-weight: normal;
     width: 5rem;
     height: 100%;
     margin-right: 5%;
@@ -246,6 +248,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: none;
+        -ms-flex-pack: none;
+            justify-content: none;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -257,11 +262,12 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 3.75rem;
-    line-height: 4.25rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: bold;
     color: #ffffff;
     width: 95%;
     height: auto;
@@ -1018,7 +1024,6 @@ body {
         -ms-flex-pack: start;
             justify-content: start;
     width: 100%;
-    border: 1px solid red;
   }
   .footer__header {
     width: 25%;
@@ -1030,8 +1035,6 @@ body {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
-    display: flex;
-    justify-content: start;
     width: 25%;
   }
   .footer__icon-img {
@@ -1057,8 +1060,6 @@ body {
     -webkit-box-pack: none;
         -ms-flex-pack: none;
             justify-content: none;
-    display: flex;
-    justify-content: none;
     width: 25%;
   }
   .footer__address-cont {
