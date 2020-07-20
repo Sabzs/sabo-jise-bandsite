@@ -22,6 +22,16 @@ h6 {
   font-weight: normal;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 @font-face {
   font-family: "Linotype";
   src: url("../assets/fonts/Linotype-AvenirNextLTPro-Bold.otf");
@@ -728,6 +738,7 @@ body {
 
 @media (min-width: 320px) {
   .footer {
+    padding-top: 5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -773,7 +784,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    margin-bottom: 8%;
+    padding-top: 5%;
+    padding-bottom: 10%;
   }
   .footer__icon-img {
     display: -webkit-box;
@@ -803,6 +815,8 @@ body {
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   .footer__company {
     display: -webkit-box;
@@ -833,6 +847,7 @@ body {
     display: flex;
     font-size: 0.81rem;
     line-height: 1.12rem;
+    font-weight: normal;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
@@ -844,6 +859,7 @@ body {
     display: flex;
     font-size: 0.81rem;
     line-height: 1.12rem;
+    font-weight: normal;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
@@ -855,6 +871,7 @@ body {
     display: flex;
     font-size: 0.81rem;
     line-height: 1.12rem;
+    font-weight: normal;
     width: 70%;
     padding-left: 5%;
     margin-top: 0%;
@@ -877,17 +894,18 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 100%;
   }
   .footer__header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: bold;
     width: 30%;
     margin-top: 0;
     margin-bottom: 0;
@@ -902,6 +920,10 @@ body {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     width: 30%;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
@@ -917,9 +939,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: flex-direction;
+        -ms-flex-pack: flex-direction;
+            justify-content: flex-direction;
     width: 30%;
   }
   .footer__details {
@@ -952,6 +974,7 @@ body {
     display: flex;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    font-weight: normal;
   }
   .footer__email {
     display: -webkit-box;
@@ -959,6 +982,7 @@ body {
     display: flex;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    font-weight: normal;
   }
   .footer__copyright {
     display: -webkit-box;
@@ -966,6 +990,7 @@ body {
     display: flex;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    font-weight: normal;
     width: 70%;
     padding-left: 2%;
     margin-top: 0%;
@@ -993,6 +1018,7 @@ body {
         -ms-flex-pack: start;
             justify-content: start;
     width: 100%;
+    border: 1px solid red;
   }
   .footer__header {
     width: 25%;
@@ -1004,6 +1030,8 @@ body {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+    display: flex;
+    justify-content: start;
     width: 25%;
   }
   .footer__icon-img {
@@ -1029,6 +1057,8 @@ body {
     -webkit-box-pack: none;
         -ms-flex-pack: none;
             justify-content: none;
+    display: flex;
+    justify-content: none;
     width: 25%;
   }
   .footer__address-cont {

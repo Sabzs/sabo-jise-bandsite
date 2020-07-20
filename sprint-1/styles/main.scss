@@ -479,32 +479,29 @@ body {
 }
 .footer {
   @include mobile {
-    display: flex;
-    flex-direction: column;
+    padding-top: 5%;
+    @include flexDirection(column);
     width: 100%;
     background-color: $primary-color;
     color: $secondary-color;
     &__info {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
       padding-right: 1rem;
       padding-left: 1rem;
       width: 100%;
     }
     &__info-content {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
     }
     &__header {
       display: flex;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-weight: bold;
+      @include fonts(1.5rem, 2rem, bold);
     }
     &__icons {
       display: flex;
       width: 100%;
-      margin-bottom: 8%;
+      padding-top: 5%;
+      padding-bottom: 10%;
     }
     &__icon-img {
       display: flex;
@@ -517,47 +514,37 @@ body {
     //   display: flex;
     // }
     &__details {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
       margin-bottom: 8%;
     }
     &__name {
       display: flex;
-      font-size: 0.81rem;
-      line-height: 1.12rem;
-      font-weight: bold;
-      margin-top: 0;
-      margin-bottom: 0;
+      @include fonts(0.81rem, 1.12rem, bold);
+      @include margin-reset;
     }
     &__company {
       display: flex;
-      font-size: 0.81rem;
-      line-height: 1.12rem;
-      font-weight: bold;
+      @include fonts(0.81rem, 1.12rem, bold);
       @include margin-reset;
     }
     &__address-cont {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
       margin-top: 5%;
       margin-bottom: 5%;
     }
     &__address {
       display: flex;
-      font-size: 0.81rem;
-      line-height: 1.12rem;
+      @include fonts(0.81rem, 1.12rem, normal);
       @include margin-reset;
     }
     &__email {
       display: flex;
-      font-size: 0.81rem;
-      line-height: 1.12rem;
+      @include fonts(0.81rem, 1.12rem, normal);
       @include margin-reset;
     }
     &__copyright {
       display: flex;
-      font-size: 0.81rem;
-      line-height: 1.12rem;
+      @include fonts(0.81rem, 1.12rem, normal);
       width: 70%;
       padding-left: 5%;
       margin-top: 0%;
@@ -572,22 +559,20 @@ body {
     //   flex-direction: column;
     // }
     &__info-content {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
+      @include flexDirection(row);
       justify-content: space-between;
+      width: 100%;
     }
     &__header {
       display: flex;
-      font-size: 36px;
-      line-height: 44px;
+      @include fonts(2.25rem, 2.75rem, bold);
       width: 30%;
       @include margin-reset;
     }
     &__icons {
-      display: flex;
-      justify-content: space-evenly;
+      @include flex-justify(space-evenly);
       width: 30%;
+      @include padding-reset;
       @include margin-reset;
     }
     &__icon-img {
@@ -595,8 +580,7 @@ body {
       margin-right: 0%;
     }
     &__logo-link {
-      display: flex;
-      justify-content: flex-end;
+      @include flex-justify(flex-direction);
       width: 30%;
     }
     &__details {
@@ -607,30 +591,23 @@ body {
     }
     &__name {
       display: flex;
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-      font-weight: bold;
+      @include fonts(0.875rem, 1.25rem, bold);
     }
     &__company {
       display: flex;
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-      font-weight: bold;
+      @include fonts(0.875rem, 1.25rem, bold);
     }
     &__address {
       display: flex;
-      font-size: 0.875rem;
-      line-height: 1.25rem;
+      @include fonts(0.875rem, 1.25rem, normal);
     }
     &__email {
       display: flex;
-      font-size: 0.875rem;
-      line-height: 1.25rem;
+      @include fonts(0.875rem, 1.25rem, normal);
     }
     &__copyright {
       display: flex;
-      font-size: 0.875rem;
-      line-height: 1.25rem;
+      @include fonts(0.875rem, 1.25rem, normal);
       width: 70%;
       padding-left: 2%;
       margin-top: 0%;
@@ -645,9 +622,9 @@ body {
       @include padding-reset;
     }
     &__info-content {
-      display: flex;
-      justify-content: start;
+      @include flex-justify(start);
       width: 100%;
+      border: 1px solid red;
     }
     &__header {
       width: 25%;
@@ -655,6 +632,7 @@ body {
     &__icons {
       display: flex;
       justify-content: start;
+      @include flex-justify(start);
       width: 25%;
     }
     &__icon-img {
@@ -672,6 +650,7 @@ body {
     &__details {
       display: flex;
       justify-content: none;
+      @include flex-justify(none);
       width: 25%;
     }
     &__address-cont {
