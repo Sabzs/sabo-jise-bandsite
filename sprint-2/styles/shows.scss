@@ -1,0 +1,323 @@
+@import "./partials/reset";
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/fonts";
+
+body {
+  font-size: 16px;
+  font-family: "Linotype";
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.nav {
+  @include mobile {
+    .navbar {
+      @include flexDirection(column);
+      width: 100%;
+      height: 5rem;
+      padding-top: 3%;
+      background: $primary-color;
+      color: $secondary-color;
+      &__logo {
+        display: flex;
+        align-self: center;
+      }
+      &__logo-img {
+        display: flex;
+      }
+      &__list {
+        @include flex-justify(center);
+        height: 65%;
+        padding-left: 0;
+        margin: 0;
+        padding-top: 16px;
+      }
+      &__items {
+        @include flex-justify(center);
+        list-style-type: none;
+        @include fonts(0.81rem, 1.12rem, normal);
+        width: 160px;
+        &:hover {
+          cursor: pointer;
+          color: #e34061;
+          border-bottom: 4px solid $secondary-color;
+        }
+      }
+    }
+    .hero {
+      display: flex;
+      max-width: 100%;
+      height: 62%;
+      margin: 0 auto;
+      position: relative;
+      &__hero-img {
+        width: 100%;
+        padding-top: 18.6%;
+        padding-bottom: 18.6%;
+        background-image: url("../assets/images/dark-rider-JmVaNyemtN8-unsplash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: 1;
+          background: $color-overlay;
+        }
+      }
+      &__header {
+        @include flex-alignItems(center);
+        height: 100%;
+        padding-left: 1rem;
+      }
+      &__title {
+        display: flex;
+        @include fonts(1.5rem, 2rem, bold);
+        color: $secondary-color;
+        width: 75%;
+        @include margin-reset;
+      }
+    }
+  }
+  @include tablet {
+    .navbar {
+      @include flexDirection(row);
+      width: 100%;
+      height: 5rem;
+      padding-top: 0;
+      padding-left: 1.5rem;
+      &__logo {
+        display: flex;
+      }
+      &__logo-img {
+        display: flex;
+      }
+      &__list {
+        @include flex-justifyAlign(center, center);
+        height: 100%;
+        width: 30%;
+        padding-top: 0;
+      }
+      &__items {
+        @include flex-justifyAlign(flex-end, center);
+        @include fonts(0.875rem, 1.375rem, normal);
+        width: 5rem;
+        height: 100%;
+        margin-right: 5%;
+        &:hover {
+          cursor: pointer;
+          border-bottom: 3px solid $secondary-color;
+        }
+      }
+    }
+    .hero {
+      display: flex;
+      max-width: 100%;
+      height: 62%;
+      margin: 0 auto;
+      &__hero-img {
+        width: 100%;
+        padding: 17.06% 0;
+      }
+      &__header {
+        @include flex-justifyAlign(none, center);
+        height: 100%;
+        width: 80%;
+        padding-left: 1.5rem;
+      }
+      &__title {
+        @include flex-alignItems(center);
+        @include fonts(3.75rem, 4.25rem, bold);
+        color: $secondary-color;
+        width: 95%;
+        height: auto;
+      }
+    }
+  }
+  @include desktop {
+    .navbar {
+      display: flex;
+      width: 100%;
+      padding-left: 0;
+      &__logo {
+        display: flex;
+        padding-left: 11.25rem;
+        margin-right: 3.5rem;
+      }
+      &__list {
+        @include flex-justify(flex-start);
+      }
+      &__items {
+        @include flex-justify(flex-start);
+        margin-right: 3.5rem;
+      }
+    }
+    .hero {
+      display: flex;
+      max-width: 100%;
+      height: 62%;
+      margin: 0 auto;
+      &__hero-img {
+        width: 100%;
+        padding: 18.475% 0;
+      }
+      &__header {
+        @include flex-alignItems(center);
+        height: 100%;
+        padding-left: 11.25rem;
+      }
+      &__title {
+        display: flex;
+        color: $secondary-color;
+        width: 60%;
+      }
+    }
+  }
+}
+.main {
+  display: flex;
+  color: crimson;
+  @include fonts(1.25rem, 5rem, bold);
+  @include margin-reset;
+}
+.footer {
+  @include mobile {
+    padding-top: 5%;
+    @include flexDirection(column);
+    width: 100%;
+    background-color: $primary-color;
+    color: $secondary-color;
+    &__info {
+      @include flexDirection(column);
+      padding-right: 1rem;
+      padding-left: 1rem;
+      width: 100%;
+    }
+    &__info-content {
+      @include flexDirection(column);
+    }
+    &__header {
+      display: flex;
+      @include fonts(1.5rem, 2rem, bold);
+    }
+    &__icons {
+      display: flex;
+      width: 100%;
+      padding-top: 5%;
+      padding-bottom: 10%;
+    }
+    &__icon-img {
+      display: flex;
+      margin-right: 10%;
+    }
+    &__logo-link {
+      display: none;
+    }
+    &__details {
+      @include flexDirection(column);
+      margin-bottom: 8%;
+    }
+    @include details-contents-mobile;
+
+    &__copyright {
+      display: flex;
+      @include fonts(0.81rem, 1.12rem, normal);
+      width: 70%;
+      padding-left: 5%;
+      margin-top: 0%;
+      padding-bottom: 5%;
+    }
+  }
+  @include tablet {
+    display: flex;
+    padding-top: 5%;
+    &__info-content {
+      @include flexDirection(row);
+      justify-content: space-between;
+      width: 100%;
+    }
+    &__header {
+      display: flex;
+      @include fonts(2.25rem, 2.75rem, bold);
+      width: 30%;
+      @include margin-reset;
+    }
+    &__icons {
+      @include flex-justify(space-evenly);
+      width: 30%;
+      @include padding-reset;
+      @include margin-reset;
+    }
+    &__icon-img {
+      display: flex;
+      margin-right: 0%;
+    }
+    &__logo-link {
+      @include flex-justify(flex-direction);
+      width: 30%;
+    }
+    &__details {
+      display: flex;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      margin-bottom: 0;
+    }
+    @include details-contents-tablet;
+
+    &__copyright {
+      display: flex;
+      @include fonts(0.875rem, 1.25rem, normal);
+      width: 70%;
+      padding-left: 2%;
+      margin-top: 0%;
+      padding-bottom: 5%;
+    }
+  }
+  @include desktop {
+    margin-top: 3rem;
+    padding-left: 11.25rem;
+    padding-right: 11.25rem;
+    &__info {
+      @include padding-reset;
+    }
+    &__info-content {
+      @include flex-justify(start);
+      width: 100%;
+    }
+    &__header {
+      width: 25%;
+    }
+    &__icons {
+      @include flex-justify(start);
+      width: 25%;
+    }
+    &__icon-img {
+      margin-right: 32px;
+    }
+    &__logo-link {
+      width: 50%;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    &__logo {
+      width: 120px;
+      height: 24px;
+    }
+    &__details {
+      @include flex-justify(none);
+      width: 25%;
+    }
+    &__address-cont {
+      margin-top: 7%;
+      margin-bottom: 7%;
+    }
+    &__copyright {
+      padding-left: 0;
+    }
+  }
+}
