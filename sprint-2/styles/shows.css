@@ -109,16 +109,30 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    list-style-type: none;
     font-size: 0.81rem;
     line-height: 1.12rem;
     font-weight: normal;
     width: 160px;
   }
-  .nav .navbar__items:hover {
+  .nav .navbar__items-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .nav .navbar__items-link:hover {
     cursor: pointer;
     color: #e34061;
-    border-bottom: 4px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
   }
   .nav .hero {
     display: -webkit-box;
@@ -133,7 +147,7 @@ body {
     width: 100%;
     padding-top: 18.6%;
     padding-bottom: 18.6%;
-    background-image: url("../assets/images/dark-rider-JmVaNyemtN8-unsplash.jpg");
+    background-image: url("../assets/images/rocco-dipoppa-_uDj_lyPVpA-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -213,15 +227,6 @@ body {
     padding-top: 0;
   }
   .nav .navbar__items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: normal;
@@ -229,9 +234,28 @@ body {
     height: 100%;
     margin-right: 5%;
   }
-  .nav .navbar__items:hover {
+  .nav .navbar__items-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    color: #ffffff;
     cursor: pointer;
-    border-bottom: 3px solid #ffffff;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .nav .navbar__items-link:hover {
+    cursor: pointer;
+    color: #e34061;
+    border-bottom: 1px solid #ffffff;
   }
   .nav .hero {
     display: -webkit-box;
@@ -599,10 +623,6 @@ body {
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: normal;
-    text-decoration: none;
-    list-style-type: none;
-    color: #ffffff;
-    cursor: pointer;
   }
   .footer__copyright {
     display: -webkit-box;

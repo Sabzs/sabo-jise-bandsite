@@ -62,7 +62,7 @@
 }
 
 // A-Tags //
-@mixin aTags-settings {
+@mixin aTags-stns {
   text-decoration: none;
   list-style-type: none;
   color: $secondary-color;
@@ -94,10 +94,7 @@
   &__email {
     display: flex;
     @include fonts(0.81rem, 1.12rem, normal);
-    text-decoration: none;
-    list-style-type: none;
-    color: $secondary-color;
-    cursor: pointer;
+    @include aTags-stns;
   }
 }
 
@@ -117,9 +114,5 @@
   &__email {
     display: flex;
     @include fonts(0.875rem, 1.25rem, normal);
-    text-decoration: none;
-    list-style-type: none;
-    color: $secondary-color;
-    cursor: pointer;
   }
 }
