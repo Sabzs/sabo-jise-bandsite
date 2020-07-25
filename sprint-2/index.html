@@ -16,8 +16,8 @@
             </a>
             <ul class="navbar__list">
                 <li class="navbar__items"> <a class="navbar__items-link" href="./index.html">Biography</a></li>
-                <li class="navbar__items navbar__items--center "><a class="navbar__items-link"
-                        href="../sprint-2/shows/shows.html">Shows</a> </li>
+                <li class="navbar__items "><a class="navbar__items-link" href="../sprint-2/shows/shows.html">Shows</a>
+                </li>
             </ul>
         </nav>
         <section class="hero">
@@ -87,16 +87,21 @@
                     <!-- <div class="main__mohan">  -->
                     <label class="main__name-label" for="name">NAME</label>
                     <!-- </div> -->
-                    <div class="main__mohan-input">
-                        <img class="main__mohan-img" src="./assets/images/Mohan-muruge.jpg" alt="user icon">
-                        <input class="main__input-name" type="name" placeholder="Enter your name" />
+                    <div class="main__mo-container">
+                        <div class="main__mo-ImgDiv">
+                            <img class="main__mo-img" src="./assets/images/Mohan-muruge.jpg" alt="user icon">
+                        </div>
+                        <input class="main__mo-input" type="name" placeholder="Enter your name" />
                     </div>
                 </div>
                 <div class="main__text-area">
                     <label class="main__comment-lable" for="comment">COMMENT</label>
                     <textarea class="main__comment-text" rows="7" cols="40" name="comment" form="usrform"
                         placeholder="Add a new comment"></textarea>
-                    <button class="main__submit-btn" type="submit">COMMENT</button>
+                    <div class="main__submit-btnDiv">
+                        <button class="main__submit-btn" type="submit">COMMENT</button>
+                    </div>
+
                 </div>
             </form>
             <!-- DOM API section -->

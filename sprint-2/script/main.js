@@ -36,6 +36,14 @@ function createCommentElem(comment) {
     const commentsInfoDiv = document.createElement("div");
     commentsInfoDiv.classList.add("main__comment-info");
 
+
+    // create <img> tag for silver-grey circle and append to "commentElemt"
+    const circleDiv = document.createElement("div")
+    circleDiv.classList.add("main__circleDiv")
+    const imageCircle = document.createElement("div");
+    imageCircle.classList.add("main__greyCircle");
+
+
     /* create <div> container for and append name/timestamp/imamgeCircle --- 
     then append <div> container to "commentElemt" */
     const userCommentsDiv = document.createElement("div");
@@ -44,9 +52,6 @@ function createCommentElem(comment) {
     // const userTextDiv = document.createElement("div");
     // userTextDiv.classList.add("main__userComments");
 
-    // create <img> tag for silver-grey circle and append to "commentElemt"
-    const imageCircle = document.createElement("div");
-    imageCircle.classList.add("main__greyCircle");
 
     // append name/date to this div then append this <div> to <nameDateDiv>
     const nameDateDiv = document.createElement("div");
@@ -71,15 +76,21 @@ function createCommentElem(comment) {
     //====================== APENDDING SECTION =======================================//
     // append to <commentsInfoDiv>
     // commentsInfoDiv.appendChild(commentDescriptionElem);
-    commentsInfoDiv.appendChild(imageCircle);
+    commentsInfoDiv.appendChild(circleDiv);
     commentsInfoDiv.appendChild(userCommentsDiv);
 
+    // append imageCircle to parent <cirCleDiv> 
+    circleDiv.appendChild(imageCircle);
+
+    // userCommentsDiv.appendChild(nameDate/Description);
+    userCommentsDiv.appendChild(nameDateDiv);
+    userCommentsDiv.appendChild(commentDescription)
+
+    // nameDate appendChild <p> tags name/date 
     nameDateDiv.appendChild(commentName);
     nameDateDiv.appendChild(commentTime);
 
-    // userCommentsDiv.appendChild(imageCircle);
-    userCommentsDiv.appendChild(nameDateDiv);
-    userCommentsDiv.appendChild(commentDescription)
+
 
     //==================== FINAL APPEND TO MAIN-DIV ====================================//
     // glues everything together and appends to the MAIN DIV
