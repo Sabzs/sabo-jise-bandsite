@@ -262,6 +262,8 @@ body {
     }
     &__galary {
       @include flexDirection(column);
+      margin-bottom: 2.5rem;
+      background-color: $color-alabaster;
     }
     &__galary-header {
       display: flex;
@@ -286,102 +288,149 @@ body {
     //Join the conversation section - mobile//
     &__conversation {
       display: flex;
-      border: 1px solid purple;
+      flex-direction: column;
     }
     &__form {
       display: flex;
       flex-direction: column;
       width: 100%;
-      border: 1px dashed black;
+      margin-bottom: 2rem;
     }
-    &__header {
+    &__form-header {
       display: flex;
-      margin-bottom: 40px;
+      margin-bottom: 2.5rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: bold;
     }
     &__nameArea {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
     }
     &__name-label {
       display: flex;
       align-self: center;
+      color: $color-silver;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
       width: 100%;
-      padding-left: 22%;
+      padding-left: 4.25rem;
     }
     &__mohan-input {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
       align-items: center;
       width: 100%;
     }
-    // &__mohan {
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   // width: 72px;
-    //   // height: 100%;
-    //   // // height: 66%;
-    //   border: 1px solid black;
-    // }
     &__mohan-img {
       display: flex;
-      width: 48px;
-      height: 48px;
+      width: 3rem;
+      height: 3rem;
       object-fit: cover;
       border-radius: 50%;
+      margin-right: 1.25rem;
     }
     &__input-name {
       display: flex;
-      width: 224px;
-      height: 48px;
-      border-radius: 4px;
+      width: 14rem;
+      height: 3rem;
+      // border-radius: 0.25rem;
+      border-radius: 0.3rem;
+      border-color: $primary-color;
     }
     &__text-area {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       width: 100%;
-      margin-bottom: 32px;
-      border: 1px solid crimson;
     }
-    // &__user-comment {
-    //   display: flex;
-    //   flex-direction: column;
-    //   // justify-content: flex-end;
-    //   // align-items: center;
-    //   width: 80%;
-    //   border: 1px dashed cyan;
-    // }
     &__comment-lable {
       display: flex;
-      width: 224px;
-      // padding-left: 15%;
+      width: 14rem;
+      color: $color-silver;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
     }
     &__comment-text {
       display: flex;
-      width: 224px;
-      height: 96px;
-      border-radius: 4px;
+      width: 14rem;
+      height: 6rem;
+      // border-radius: 0.25rem;
+      border-radius: 0.3rem;
+      background-color: $color-alabaster;
       margin-bottom: 4%;
     }
     &__submit-btn {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 224px;
-      height: 48px;
-      border-radius: 4px;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+      background-color: $primary-color;
+      color: $secondary-color;
+      width: 14rem;
+      height: 3rem;
+      border-radius: 0.25rem;
+      border: none;
     }
     // ==== DOM API section  ====  //
     &__userComs {
       display: flex;
-      border: 1px solid lime;
+      flex-direction: column;
+      margin-bottom: 2.5rem;
     }
-
-    //Join the conversation section - mobile//
+    &__comment-info {
+      display: flex;
+      border-top: 1px solid $color-mercury;
+      border-bottom: 1px solid $color-mercury;
+    }
+    &__userComments {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      width: 14rem;
+    }
+    &__userText {
+      display: flex;
+      margin: 0;
+      font-size: 0.812rem;
+      line-height: 1.125rem;
+      padding-top: 1rem;
+    }
+    &__greyCircle {
+      display: flex;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      margin-top: 1.5rem;
+      margin-right: 1.25rem;
+      background-color: $color-mercury;
+    }
+    &__nameDate {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__userName {
+      display: flex;
+      margin: 0;
+      font-size: 0.81rem;
+      line-height: 1.125rem;
+      font-weight: bold;
+    }
+    &__userTime {
+      display: flex;
+      margin: 0;
+      font-size: 0.81rem;
+      line-height: 1.125rem;
+      color: $color-silver;
+    }
+    //Join the conversation section - mobile  ==================//
   }
   @include tablet {
     &__about-musicians {
@@ -450,6 +499,166 @@ body {
       width: 30.435%;
       height: 26%;
     }
+
+    //Join the conversation section - tablet//
+
+    // &__conversation {
+    //   display: flex;
+    //   flex-direction: column;
+    // }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    &__form-header {
+      display: flex;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      margin-bottom: 2.5rem;
+      font-weight: bold;
+    }
+    &__nameArea {
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+      padding-left: 6.25rem;
+      padding-right: 6.25rem;
+      margin-bottom: 1.25rem;
+    }
+    &__name-label {
+      display: flex;
+      align-self: center;
+      color: $color-silver;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      width: 100%;
+      // padding-left: 22%;
+      // padding-left: 4.8rem;
+    }
+    // &__mohan-input {
+    //   display: flex;
+    //   justify-content: space-between;
+    //   align-items: center;
+    //   width: 100%;
+    // }
+    &__mohan-img {
+      display: flex;
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 4%;
+    }
+    &__input-name {
+      display: flex;
+      width: 14rem;
+      height: 3rem;
+      // border-radius: 0.25rem;
+      border-radius: 0.3rem;
+      border-color: $primary-color;
+      width: 100%;
+    }
+    &__text-area {
+      // display: flex;
+      // flex-direction: column;
+      // align-items: flex-end;
+      width: 100%;
+      padding-left: 10.5rem;
+      padding-right: 6.25rem;
+    }
+    &__comment-lable {
+      display: flex;
+      width: 100%;
+      // color: $color-silver;
+      // font-size: 0.75rem;
+      // line-height: 1.25rem;
+    }
+    &__comment-text {
+      display: flex;
+      width: 100%;
+      // height: 6rem;
+      // border-radius: 0.25rem;
+      border-radius: 0.3rem;
+      background-color: $color-alabaster;
+      // margin-bottom: 4%;
+    }
+    // &__submit-btn {
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   font-size: 0.75rem;
+    //   line-height: 1.25rem;
+    //   background-color: $primary-color;
+    //   color: $secondary-color;
+    //   width: 14rem;
+    //   height: 3rem;
+    //   border-radius: 0.25rem;
+    //   border: none;
+    // }
+    // // ==== DOM API section  ====  //
+    &__userComs {
+      // display: flex;
+      // flex-direction: column;
+      padding-left: 6.25rem;
+      padding-right: 6.25rem;
+      margin-bottom: 2.5rem;
+    }
+    &__comment-info {
+      display: flex;
+      // border-top: 1px solid $color-mercury;
+      // border-bottom: 1px solid $color-mercury;
+    }
+    &__userComments {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      // width: 14rem;
+      width: 100%;
+    }
+    &__userText {
+      display: flex;
+      margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      padding-top: 1rem;
+      // width: 100%;
+    }
+    &__greyCircle {
+      display: flex;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      // margin-top: 1.5rem;
+      margin-right: 4%;
+      background-color: $color-mercury;
+    }
+    &__nameDate {
+      display: flex;
+      justify-content: flex-start;
+      // align-items: center;
+      width: 100%;
+    }
+    &__userName {
+      // display: flex;
+      // margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      font-weight: bold;
+      padding-right: 4%;
+    }
+    &__userTime {
+      // display: flex;
+      // margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      color: $color-silver;
+    }
+
     //Join the conversation section - tablet//
   }
   @include desktop {
@@ -521,12 +730,176 @@ body {
       width: 31.853%;
       height: 19%;
     }
+
+    //Join the conversation section - desktop//
+
+    // &__conversation {
+    //   display: flex;
+    //   flex-direction: column;
+    // }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    &__form-header {
+      display: flex;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      margin-top: 3rem;
+      margin-bottom: 3.5rem;
+      font-weight: bold;
+    }
+    &__nameArea {
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+      padding-left: 17.25rem;
+      // padding-left: 6.25rem;
+      padding-right: 17.25rem;
+      // padding-right: 6.25rem;
+      margin-bottom: 1.25rem;
+    }
+    &__name-label {
+      display: flex;
+      align-self: center;
+      color: $color-silver;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      width: 100%;
+      // padding-left: 22%;
+      // padding-left: 5rem;
+    }
+    // &__mohan-input {
+    //   display: flex;
+    //   justify-content: space-between;
+    //   align-items: center;
+    //   width: 100%;
+    // }
+    &__mohan-img {
+      display: flex;
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 1.25rem;
+    }
+    &__input-name {
+      display: flex;
+      width: 14rem;
+      // width: 28.75rem;
+      height: 3rem;
+      // border-radius: 0.25rem;
+      border-radius: 0.3rem;
+      border-color: $primary-color;
+      width: 100%;
+    }
+    &__text-area {
+      // display: flex;
+      // flex-direction: column;
+      // align-items: flex-end;
+      width: 100%;
+      padding-left: 21.5rem;
+      padding-right: 17.25rem;
+    }
+    &__comment-lable {
+      display: flex;
+      width: 100%;
+      // color: $color-silver;
+      // font-size: 0.75rem;
+      // line-height: 1.25rem;
+    }
+    &__comment-text {
+      display: flex;
+      width: 100%;
+      // height: 6rem;
+      // border-radius: 0.25rem;
+      border-radius: 0.3rem;
+      background-color: $color-alabaster;
+      // margin-bottom: 4%;
+    }
+    // &__submit-btn {
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   font-size: 0.75rem;
+    //   line-height: 1.25rem;
+    //   background-color: $primary-color;
+    //   color: $secondary-color;
+    //   width: 14rem;
+    //   height: 3rem;
+    //   border-radius: 0.25rem;
+    //   border: none;
+    // }
+    // // ==== DOM API section  ====  //
+    &__userComs {
+      // display: flex;
+      // flex-direction: column;
+      padding-left: 17.25rem;
+      padding-right: 17.25rem;
+      margin-bottom: 2.5rem;
+    }
+    &__comment-info {
+      display: flex;
+      // border-top: 1px solid $color-mercury;
+      // border-bottom: 1px solid $color-mercury;
+    }
+    &__userComments {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      // width: 14rem;
+      width: 100%;
+    }
+    &__userText {
+      display: flex;
+      margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      padding-top: 1rem;
+      // width: 100%;
+    }
+    &__greyCircle {
+      display: flex;
+      width: 3.18rem;
+      height: 3rem;
+      border-radius: 50%;
+      margin-top: 1.5rem;
+      margin-right: 1rem;
+      background-color: $color-mercury;
+    }
+    &__nameDate {
+      display: flex;
+      justify-content: flex-start;
+      // align-items: center;
+      width: 100%;
+    }
+    &__userName {
+      // display: flex;
+      // margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      font-weight: bold;
+      padding-right: 4%;
+    }
+    &__userTime {
+      // display: flex;
+      // margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      color: $color-silver;
+    }
+
     //Join the conversation section - desktop//
   }
 }
 .footer {
   @include mobile {
-    padding-top: 5%;
+    padding-top: 10%;
     @include flexDirection(column);
     width: 100%;
     background-color: $primary-color;
@@ -554,7 +927,7 @@ body {
       display: flex;
       margin-right: 10%;
     }
-    &__logo-link {
+    &__logoDiv {
       display: none;
     }
     &__details {
@@ -596,9 +969,14 @@ body {
       display: flex;
       margin-right: 0%;
     }
+    &__logoDiv {
+      display: flex;
+      justify-content: flex-end;
+      width: 30%;
+      padding-right: 0.5rem;
+    }
     &__logo-link {
       @include flex-justify(flex-direction);
-      width: 30%;
     }
     &__details {
       display: flex;

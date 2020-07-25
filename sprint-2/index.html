@@ -67,7 +67,7 @@
 
         </section>
         <section class="main__galary">
-            <h2 class="main__galary-header">Photo Galary</h2>
+            <h2 class="main__galary-header">Photo Gallery</h2>
             <div class="main__photos">
                 <img class="main__galary-img" src="./assets/images/Photo-gallery-1.jpg" alt="Concert Photo">
                 <img class="main__galary-img" src="./assets/images/Photo-gallery-2.jpg" alt="Concert Photo">
@@ -82,7 +82,7 @@
         </section>
         <section class="main__conversation">
             <form class="main__form">
-                <h1 class="main__header">Join the Conversation</h1>
+                <h2 class="main__form-header">Join the Conversation</h2>
                 <div class="main__nameArea">
                     <!-- <div class="main__mohan">  -->
                     <label class="main__name-label" for="name">NAME</label>
@@ -98,11 +98,9 @@
                         placeholder="Add a new comment"></textarea>
                     <button class="main__submit-btn" type="submit">COMMENT</button>
                 </div>
-
-                <!-- DOM API section -->
-                <div class="main__userComs" id="comments"></div>
             </form>
-
+            <!-- DOM API section -->
+            <div class="main__userComs" id="comments"></div>
         </section>
     </main>
 
@@ -115,10 +113,13 @@
                     <img class="footer__icon-img" src="./assets/icons/svg/Icon-facebook.svg" alt="Facebook Icon">
                     <img class="footer__icon-img" src="./assets/icons/svg/Icon-twitter.svg" alt="Twitter Icon">
                 </div>
-                <a class="footer__logo-link" href="./index.html">
-                    <img class="footer__logo" src="./assets/logo/Logo-bandsite.svg" alt="Bandsite Logo">
-                </a>
+                <div class="footer__logoDiv">
+                    <a class="footer__logo-link" href="./index.html">
+                        <img class="footer__logo" src="./assets/logo/Logo-bandsite.svg" alt="Bandsite Logo">
+                    </a>
+                </div>
             </div>
+
         </div>
         <div class="footer__info">
             <div class="footer__info-content">
@@ -153,6 +154,7 @@
         </div>
         <p class="footer__copyright">Copyright The Bees Knees © 2018 All Rights Reserved</p>
     </footer>
+    <script src="./script/main.js"></script>
 </body>
 
 </html>
