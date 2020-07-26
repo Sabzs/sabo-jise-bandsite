@@ -1,11 +1,26 @@
-//add prevent default ===HERE=== //
-
-//============================================================================//
+// const messageList = document.getElementById("messageList");
+// const messageForm = document.getElementById("messageForm");
 const commentsCont = document.getElementById("comments");
 const userForm = document.getElementById("userForm");
 
-
-const commentsData = [
+// const messages = [
+//     {
+//         name: "Jim",
+//         message: "hello world",
+//         date: new Date("Jan 19, 2019")
+//     },
+//     {
+//         name: "Neo",
+//         message: "meow world",
+//         date: new Date("Jan 19, 2020")
+//     },
+//     {
+//         name: "Joe",
+//         message: "JavaScript!!!",
+//         date: new Date("Jan 19, 2016")
+//     }
+// ];
+const commentList = [
     {
         name: "Michael Lyons",
         timestamp: "12/18/2018",
@@ -24,16 +39,42 @@ const commentsData = [
 ];
 
 
+//function appendMessages(messageArr)
+// function loopThroughComments(commentsArr) {
+//     comments.innerHTML = '';
+
+//     // const sortedArry = messageArr.sort(function (a, b) {
+//     // const sortedArry = commentsArr.sort(function (a, b) {
+//     //     return b.date - a.date;
+//     // });
+
+//     // for (let i = 0; i < sortedArry.length; i++) {
+//     //     const messageLi = document.createElement("li");
+//     //     messageLi.innerText = sortedArry[i].message;
+//     //     messageList.appendChild(messageLi);
+//     // }
+
+//     // for (let i = 0; i < comments.length; i++) {
+//     //     const commentsDiv = document.createElement("div");
+//     //     commentsDiv.innerText = sortedArry[i].commentList;
+//     //     comments.appendChild(commentsDiv);
+//     // }
+// }
+
 function loopThroughComments(commentsArr) {
     //clearing the input/textarea 
     comments.innerHTML = '';
 
+    // const sortedArry = commentsArr.sort(function (a, b) {
+    //     return b.date - a.date;
+    // });
 
     for (let i = 0; i < commentsArr.length; i++) {
         commentsArr[i].anotherKey = "new value";
         createCommentElem(commentsArr[i]);
     }
 }
+
 function createCommentElem(comment) {
     // create a <div>
     const commentsInfoDiv = document.createElement("div");
@@ -93,29 +134,32 @@ function createCommentElem(comment) {
     // glues everything together and appends to the MAIN DIV
     commentsCont.appendChild(commentsInfoDiv);
 }
-// loopThroughComments(commentsData);
+loopThroughComments(comments);
 
 
-//===================================================================================//
+
 userForm.addEventListener('submit', function (event) {
     event.preventDefault();
-    const nameInput = event.target.userName.value;
-    const commentInput = event.target.userComment.value;
+    // const nameInput = event.target.userName.value;
+    console.log(event.target.userName.value);
+    // const commentInput = event.target.userComment.value;
+    console.log(event.target.userComment.value);
 
-    commentsData.push(
-        {
-            name: nameInput,
-            timestamp: new Date().toLocalstring(
-                day: 'numeric',
-                month: 'numeric',
-                year: 'numeric'
-            ),
-            // timestamp: now.toLocalstring(),
-            description: commentInput,
-        },
-    );
+    // commentList.push(
+    //     {
+    //         name: 'Joe',
+    //         nameInput: userName,
+    //         date: new Date()
+    //     },
+    //     {
+    //         name: 'Peter',
+    //         nameInput: userName,
+    //         date: new Date()
+    //     }
+    // );
     // console.log(comments);
-    loopThroughComments(commentsData);
+    //  appendMessages(messages)
+    // loopThroughComments(comments);
 });
-
-loopThroughComments(commentsData);
+// appendMessages(messages);
+loopThroughComments(comments);

@@ -31,23 +31,27 @@ body {
         height: 65%;
         padding-left: 0;
         margin: 0;
-        padding-top: 16px;
       }
       &__items {
         @include flex-justify(center);
-        @include fonts(0.81rem, 1.12rem, normal);
-        width: 160px;
+        width: 10rem;
+        //move the active / hover class to here / make the white line active//
       }
       &__items-link {
         display: flex;
         @include aTags-stns;
+        @include fonts(0.81rem, 1.12rem, normal);
         @include flex-justify(center);
-        width: 100%;
+        align-items: center;
+        width: 5rem;
         height: 100%;
         &:hover {
           cursor: pointer;
           color: $color-hoverItems;
-          border-bottom: 1px solid $secondary-color;
+          border-bottom: 3px solid $secondary-color;
+        }
+        &:active {
+          color: $color-active;
         }
       }
     }
@@ -61,25 +65,28 @@ body {
         width: 100%;
         padding-top: 18.6%;
         padding-bottom: 18.6%;
-        background-image: url("../assets/images/rocco-caruso-h4jXGhm8wuA-unsplash.jpg");
+        background: linear-gradient(
+            rgba($primary-color, 0.5),
+            rgba($primary-color, 0.5)
+          ),
+          url("../assets/images/rocco-caruso-h4jXGhm8wuA-unsplash.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          z-index: 1;
-          background: $color-overlay;
-        }
       }
       &__header {
         @include flex-alignItems(center);
         height: 100%;
         padding-left: 1rem;
+      }
+      &__headerIntro {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid lime;
+      }
+      &__womenAlbum {
+        display: flex;
+        color: $secondary-color;
       }
       &__title {
         display: flex;
@@ -104,32 +111,35 @@ body {
         display: flex;
       }
       &__list {
-        @include flex-justifyAlign(center, center);
+        // @include flex-justifyAlign(center, center);
+        justify-content: space-around;
         height: 100%;
-        width: 30%;
+        width: 40%;
         padding-top: 0;
       }
       &__items {
         // @include flex-justifyAlign(flex-end, center);
-        @include fonts(0.875rem, 1.375rem, normal);
+        display: flex;
         width: 5rem;
         height: 100%;
-        margin-right: 5%;
+        // margin-right: 10%;
       }
       &__items-link {
         display: flex;
         @include aTags-stns;
-        // @include flex-justify(center);
-        @include flex-justifyAlign(flex-end, center);
+        @include fonts(0.875rem, 1.375rem, normal);
+        align-items: center;
+        // @include flex-justifyAlign(flex-end, center);
         width: 100%;
         height: 100%;
-        &:hover {
-          cursor: pointer;
-          color: $color-hoverItems;
-          border-bottom: 1px solid $secondary-color;
-        }
+        // &:active {
+        //   cursor: pointer;
+        //   color: $color-hoverItems;
+        //   border-bottom: 1px solid $secondary-color;
+        // }
       }
     }
+
     .hero {
       display: flex;
       max-width: 100%;
@@ -194,15 +204,17 @@ body {
     }
   }
 }
+
 .main {
   display: flex;
-  color: crimson;
-  @include fonts(1.25rem, 5rem, bold);
-  @include margin-reset;
+  // // color: crimson;
+  // @include fonts(1.25rem, 5rem, bold);
+  // @include margin-reset;
 }
+
 .footer {
   @include mobile {
-    padding-top: 5%;
+    padding-top: 10%;
     @include flexDirection(column);
     width: 100%;
     background-color: $primary-color;
@@ -230,7 +242,7 @@ body {
       display: flex;
       margin-right: 10%;
     }
-    &__logo-link {
+    &__logoDiv {
       display: none;
     }
     &__details {
@@ -272,9 +284,14 @@ body {
       display: flex;
       margin-right: 0%;
     }
+    &__logoDiv {
+      display: flex;
+      justify-content: flex-end;
+      width: 30%;
+      padding-right: 0.5rem;
+    }
     &__logo-link {
       @include flex-justify(flex-direction);
-      width: 30%;
     }
     &__details {
       display: flex;
@@ -314,8 +331,14 @@ body {
     &__icon-img {
       margin-right: 32px;
     }
-    &__logo-link {
+    &__logoDiv {
+      display: flex;
+      justify-content: flex-end;
       width: 50%;
+      padding-right: 0;
+    }
+    &__logo-link {
+      // width: 50%;
       justify-content: flex-end;
       align-items: center;
     }

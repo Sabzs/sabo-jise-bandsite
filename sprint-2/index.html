@@ -81,7 +81,7 @@
             </div>
         </section>
         <section class="main__conversation">
-            <form class="main__form">
+            <form class="main__form" id="userForm">
                 <h2 class="main__form-header">Join the Conversation</h2>
                 <div class="main__nameArea">
                     <!-- <div class="main__mohan">  -->
@@ -91,17 +91,17 @@
                         <div class="main__mo-ImgDiv">
                             <img class="main__mo-img" src="./assets/images/Mohan-muruge.jpg" alt="user icon">
                         </div>
-                        <input class="main__mo-input" type="name" placeholder="Enter your name" />
+                        <input class="main__mo-input" type="name" name="userName" placeholder="Enter your name" />
                     </div>
                 </div>
                 <div class="main__text-area">
                     <label class="main__comment-lable" for="comment">COMMENT</label>
-                    <textarea class="main__comment-text" rows="7" cols="40" name="comment" form="usrform"
+                    <textarea class="main__comment-text" name="userComment" cols="7" rows="40"
                         placeholder="Add a new comment"></textarea>
+
                     <div class="main__submit-btnDiv">
                         <button class="main__submit-btn" type="submit">COMMENT</button>
                     </div>
-
                 </div>
             </form>
             <!-- DOM API section -->
@@ -160,6 +160,7 @@
         <p class="footer__copyright">Copyright The Bees Knees © 2018 All Rights Reserved</p>
     </footer>
     <script src="./script/main.js"></script>
+    <!-- <script src="./script/testing.js"></script> -->
 </body>
 
 </html>
