@@ -24,9 +24,15 @@ const commentsData = [
 ];
 
 
+
+
 function loopThroughComments(commentsArr) {
     //clearing the input/textarea 
     comments.innerHTML = '';
+
+    // const sortedArry = showsArr.sort(function (a, b) {
+    //     return b.date - a.date;
+    // });
 
 
     for (let i = 0; i < commentsArr.length; i++) {
@@ -34,6 +40,7 @@ function loopThroughComments(commentsArr) {
         createCommentElem(commentsArr[i]);
     }
 }
+
 function createCommentElem(comment) {
     // create a <div>
     const commentsInfoDiv = document.createElement("div");
@@ -71,8 +78,7 @@ function createCommentElem(comment) {
     commentDescription.innerText = comment.description;
 
     //====================== APENDDING SECTION =======================================//
-    // append to <commentsInfoDiv>
-    // commentsInfoDiv.appendChild(commentDescriptionElem);
+
     commentsInfoDiv.appendChild(circleDiv);
     commentsInfoDiv.appendChild(userCommentsDiv);
 
@@ -87,13 +93,11 @@ function createCommentElem(comment) {
     nameDateDiv.appendChild(commentName);
     nameDateDiv.appendChild(commentTime);
 
-
-
     //==================== FINAL APPEND TO MAIN-DIV ====================================//
     // glues everything together and appends to the MAIN DIV
     commentsCont.appendChild(commentsInfoDiv);
 }
-// loopThroughComments(commentsData);
+loopThroughComments(commentsData);
 
 
 //===================================================================================//
@@ -105,17 +109,13 @@ userForm.addEventListener('submit', function (event) {
     commentsData.push(
         {
             name: nameInput,
-            timestamp: new Date().toLocalstring(
-                day: 'numeric',
-                month: 'numeric',
-                year: 'numeric'
-            ),
-            // timestamp: now.toLocalstring(),
+            timestamp: new Date(),
             description: commentInput,
         },
     );
     // console.log(comments);
     loopThroughComments(commentsData);
+    // loopThroughComments(commentsData);
 });
 
 loopThroughComments(commentsData);

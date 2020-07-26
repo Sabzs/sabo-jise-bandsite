@@ -360,10 +360,132 @@ body {
   }
 }
 
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (min-width: 320px) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .main__shows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 2.5rem;
+  }
+  .main__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid lime;
+  }
+  .main__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+  }
+  .main__tabDesk {
+    display: none;
+  }
+  .main__shows-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-bottom: 1px solid #afafaf;
+  }
+  .main__tourEvents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main__dateHeaders {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    font-size: 0.8125rem;
+    list-style: 1.125rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+    color: #afafaf;
+  }
+  .main__eventHeaders {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.8125rem;
+    list-style: 1.125rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: #afafaf;
+  }
+  .main__eventDates {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    font-size: 0.8125rem;
+    list-style: 1.125rem;
+    font-weight: bold;
+  }
+  .main__eventDetails {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.8125rem;
+    list-style: 1.125rem;
+    margin: 0;
+  }
+  .main__buttonDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .main__btn-ticket {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #ffffff;
+    background-color: #323232;
+    border: 0;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.25rem;
+  }
 }
 
 @media (min-width: 320px) {

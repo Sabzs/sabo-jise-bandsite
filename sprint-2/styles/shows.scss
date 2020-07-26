@@ -204,12 +204,95 @@ body {
     }
   }
 }
-
 .main {
-  display: flex;
-  // // color: crimson;
-  // @include fonts(1.25rem, 5rem, bold);
-  // @include margin-reset;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    &__shows {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.5rem;
+    }
+    &__header {
+      display: flex;
+      margin-top: 2rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid lime;
+    }
+    &__title {
+      display: flex;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: bold;
+    }
+    &__tabDesk {
+      display: none;
+    }
+    &__shows-info {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid $color-silver;
+    }
+    &__tourEvents {
+      display: flex;
+      flex-direction: column;
+    }
+    &__dateHeaders {
+      display: flex;
+      margin: 0;
+      font-size: 0.8125rem;
+      list-style: 1.125rem;
+      padding-top: 1.25rem;
+      padding-bottom: 1rem;
+      color: $color-silver;
+    }
+    &__eventHeaders {
+      display: flex;
+      font-size: 0.8125rem;
+      list-style: 1.125rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      color: $color-silver;
+    }
+    &__eventDates {
+      display: flex;
+      margin: 0;
+      font-size: 0.8125rem;
+      list-style: 1.125rem;
+      font-weight: bold;
+    }
+    &__eventDetails {
+      display: flex;
+      font-size: 0.8125rem;
+      list-style: 1.125rem;
+      margin: 0;
+    }
+    &__buttonDiv {
+      display: flex;
+      width: 100%;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    &__btn-ticket {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $secondary-color;
+      background-color: $primary-color;
+      border: 0;
+      width: 100%;
+      height: 3rem;
+      border-radius: 0.25rem;
+    }
+  }
+  // @include tablet {
+  //   display: flex;
+  // }
 }
 
 .footer {
