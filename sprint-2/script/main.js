@@ -8,17 +8,17 @@ const userForm = document.getElementById("userForm");
 const commentsData = [
     {
         name: "Michael Lyons",
-        timestamp: "12/18/2018",
+        timestamp: new Date(2018, 11, 18),
         description: "They BLEW the ROOF off at their last show, once everyone started figuring out they were going.This is still simply the greatest opening of a concert I have EVER witnessed.",
     },
     {
         name: "Gary Wong",
-        timestamp: "12/12/2018",
+        timestamp: new Date(2018, 11, 11),
         description: "Every time I see him shred I feel so motivated to get off my couch and hop on my board.He’s so talented! I wish I can ride like him one day so I can really enjoy myself!",
     },
     {
         name: "Theodore Duncan",
-        timestamp: "11/15/2018",
+        timestamp: new Date(2018, 10, 15),
         description: "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!",
     },
 ];
@@ -26,18 +26,18 @@ const commentsData = [
 
 
 
-function loopThroughComments(commentsArr) {
+function loopThroughComments(showsArr) {
     //clearing the input/textarea 
     comments.innerHTML = '';
 
-    // const sortedArry = showsArr.sort(function (a, b) {
-    //     return b.date - a.date;
-    // });
+    const sortedArry = showsArr.sort(function (a, b) {
+        return b.timestamp - a.timestamp;
+    });
 
 
-    for (let i = 0; i < commentsArr.length; i++) {
-        commentsArr[i].anotherKey = "new value";
-        createCommentElem(commentsArr[i]);
+    for (let i = 0; i < sortedArry.length; i++) {
+        sortedArry[i].anotherKey = "new value";
+        createCommentElem(sortedArry[i]);
     }
 }
 
@@ -70,7 +70,10 @@ function createCommentElem(comment) {
     // create a <p> tag for the timestamp
     const commentTime = document.createElement("p");
     commentTime.classList.add("main__userTime");
-    commentTime.innerText = comment.timestamp;
+    const date = comment.timestamp.getDate();
+    const month = comment.timestamp.getMonth() + 1;
+    const year = comment.timestamp.getFullYear();
+    commentTime.innerText = `${month}, ${date}, ${year}`;
 
     // create a <p> tag for the comment description
     const commentDescription = document.createElement("p");
@@ -105,17 +108,14 @@ userForm.addEventListener('submit', function (event) {
     event.preventDefault();
     const nameInput = event.target.userName.value;
     const commentInput = event.target.userComment.value;
-
     commentsData.push(
         {
             name: nameInput,
-            timestamp: new Date(),
+            timestamp: new Date(Date.now()),
             description: commentInput,
         },
     );
-    // console.log(comments);
     loopThroughComments(commentsData);
-    // loopThroughComments(commentsData);
 });
 
 loopThroughComments(commentsData);

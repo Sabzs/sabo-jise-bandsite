@@ -220,7 +220,6 @@ body {
       display: flex;
       margin-top: 2rem;
       margin-bottom: 1.25rem;
-      border: 1px solid lime;
     }
     &__title {
       display: flex;
@@ -290,9 +289,124 @@ body {
       border-radius: 0.25rem;
     }
   }
-  // @include tablet {
-  //   display: flex;
-  // }
+  @include tablet {
+    display: flex;
+    width: 100;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    &__shows {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.5rem;
+    }
+    &__shows-info {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      height: 5rem;
+    }
+    &__tabDesk {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      font-size: 0.875rem;
+      list-style: 1.375rem;
+      color: $color-silver;
+      padding-right: 9rem;
+    }
+    &__tabDesk-para {
+      display: flex;
+      width: 33.5%;
+    }
+    &__title {
+      display: flex;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: bold;
+    }
+    &__tourEvents {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 78%;
+    }
+    &__dateHeaders {
+      display: none;
+    }
+    &__eventHeaders {
+      display: none;
+    }
+    &__eventDates {
+      display: flex;
+      margin: 0;
+      width: 33.5%;
+      font-size: 0.875rem;
+      list-style: 1.375rem;
+      font-weight: bold;
+    }
+    &__eventDetails {
+      display: flex;
+      font-size: 0.875rem;
+      list-style: 1.375rem;
+      margin: 0;
+      width: 33.5%;
+    }
+    &__buttonDiv {
+      display: flex;
+      align-items: center;
+      width: 22%;
+      height: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &__btn-ticket {
+      display: flex;
+      justify-content: center;
+      color: $secondary-color;
+      background-color: $primary-color;
+      border: 0;
+      width: 100%;
+      height: 3rem;
+      border-radius: 0.25rem;
+    }
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100;
+    padding-left: 11.25rem;
+    padding-right: 11.25rem;
+    padding-top: 2.5rem;
+    &__header {
+      display: flex;
+      margin: 0;
+    }
+    &__showsActivities {
+      display: flex;
+      flex-direction: column;
+    }
+    &__tabDesk {
+      display: flex;
+      flex-direction: row;
+      width: 50.25rem;
+      padding-right: 9rem;
+    }
+    &__tabDesk-para {
+      display: flex;
+      width: 33.5%;
+      margin: 0;
+      font-size: 0.875rem;
+      list-style: 1.375rem;
+      color: $color-silver;
+    }
+    &__tourEvents {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 40.25rem;
+    }
+  }
 }
 
 .footer {
@@ -394,7 +508,6 @@ body {
     }
   }
   @include desktop {
-    margin-top: 3rem;
     padding-left: 11.25rem;
     padding-right: 11.25rem;
     &__info {

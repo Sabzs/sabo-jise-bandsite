@@ -389,7 +389,6 @@ body {
     display: flex;
     margin-top: 2rem;
     margin-bottom: 1.25rem;
-    border: 1px solid lime;
   }
   .main__title {
     display: -webkit-box;
@@ -485,6 +484,200 @@ body {
     width: 100%;
     height: 3rem;
     border-radius: 0.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .main__shows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 2.5rem;
+  }
+  .main__shows-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 5rem;
+  }
+  .main__tabDesk {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    font-size: 0.875rem;
+    list-style: 1.375rem;
+    color: #afafaf;
+    padding-right: 9rem;
+  }
+  .main__tabDesk-para {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 33.5%;
+  }
+  .main__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: bold;
+  }
+  .main__tourEvents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 78%;
+  }
+  .main__dateHeaders {
+    display: none;
+  }
+  .main__eventHeaders {
+    display: none;
+  }
+  .main__eventDates {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    width: 33.5%;
+    font-size: 0.875rem;
+    list-style: 1.375rem;
+    font-weight: bold;
+  }
+  .main__eventDetails {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.875rem;
+    list-style: 1.375rem;
+    margin: 0;
+    width: 33.5%;
+  }
+  .main__buttonDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 22%;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .main__btn-ticket {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #ffffff;
+    background-color: #323232;
+    border: 0;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.25rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100;
+    padding-left: 11.25rem;
+    padding-right: 11.25rem;
+    padding-top: 2.5rem;
+  }
+  .main__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  .main__showsActivities {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main__tabDesk {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50.25rem;
+    padding-right: 9rem;
+  }
+  .main__tabDesk-para {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 33.5%;
+    margin: 0;
+    font-size: 0.875rem;
+    list-style: 1.375rem;
+    color: #afafaf;
+  }
+  .main__tourEvents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40.25rem;
   }
 }
 
@@ -761,7 +954,6 @@ body {
 
 @media (min-width: 1440px) {
   .footer {
-    margin-top: 3rem;
     padding-left: 11.25rem;
     padding-right: 11.25rem;
   }
