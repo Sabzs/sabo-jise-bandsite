@@ -103,32 +103,23 @@ body {
         display: flex;
       }
       &__list {
-        // @include flex-justifyAlign(center, center);
         justify-content: space-around;
         height: 100%;
         width: 40%;
         padding-top: 0;
       }
       &__items {
-        // @include flex-justifyAlign(flex-end, center);
         display: flex;
         width: 5rem;
         height: 100%;
-        // margin-right: 10%;
       }
       &__items-link {
         display: flex;
         @include aTags-stns;
         @include fonts(0.875rem, 1.375rem, normal);
         align-items: center;
-        // @include flex-justifyAlign(flex-end, center);
         width: 100%;
         height: 100%;
-        // &:active {
-        //   cursor: pointer;
-        //   color: $color-hoverItems;
-        //   border-bottom: 1px solid $secondary-color;
-        // }
       }
     }
     .hero {
@@ -344,10 +335,8 @@ body {
     }
     &__mo-input {
       display: flex;
-      // width: 14rem;
       width: 100%;
       height: 3rem;
-      // border-radius: 0.25rem;
       padding-left: 1rem;
       border-radius: 0.3rem;
       border-color: $primary-color;
@@ -355,7 +344,6 @@ body {
     &__text-area {
       display: flex;
       flex-direction: column;
-      // align-items: flex-end;
       padding-left: 4.25rem;
       width: 100%;
     }
@@ -368,10 +356,8 @@ body {
     }
     &__comment-text {
       display: flex;
-      // width: 14rem;
       width: 100%;
       height: 6rem;
-      // border-radius: 0.25rem;
       padding-top: 1rem;
       padding-left: 1rem;
       border-radius: 0.3rem;
@@ -388,7 +374,6 @@ body {
       align-items: center;
       font-size: 0.75rem;
       line-height: 1.25rem;
-      // width: 10rem;
       width: 100%;
       height: 3rem;
       border-radius: 0.25rem;
@@ -427,10 +412,8 @@ body {
       flex-direction: column;
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
-      // width: 14rem;
       width: 100%;
     }
-
     &__userText {
       display: flex;
       margin: 0;
@@ -439,7 +422,6 @@ body {
       line-height: 1.125rem;
       padding-top: 1rem;
     }
-
     &__nameDate {
       display: flex;
       justify-content: space-between;
@@ -528,13 +510,6 @@ body {
       width: 30.435%;
       height: 26%;
     }
-
-    //Join the conversation section - tablet//
-
-    // &__conversation {
-    //   display: flex;
-    //   flex-direction: column;
-    // }
     &__form {
       display: flex;
       flex-direction: column;
@@ -549,10 +524,6 @@ body {
       font-weight: bold;
     }
     &__nameArea {
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
       padding-left: 6.25rem;
       padding-right: 6.25rem;
       margin-bottom: 1.25rem;
@@ -564,36 +535,23 @@ body {
       font-size: 0.875rem;
       line-height: 1.25rem;
       width: 100%;
-      // padding-left: 22%;
-      // padding-left: 4.8rem;
     }
-    // &__mohan-input {
-    //   display: flex;
-    //   justify-content: space-between;
-    //   align-items: center;
-    //   width: 100%;
-    // }
     &__mo-img {
       display: flex;
       width: 3rem;
       height: 3rem;
       object-fit: cover;
       border-radius: 50%;
-      // margin-right: 4%;
     }
     &__mo-input {
       display: flex;
       width: 14rem;
       height: 3rem;
-      // border-radius: 0.25rem;
       border-radius: 0.3rem;
       border-color: $primary-color;
       width: 100%;
     }
     &__text-area {
-      // display: flex;
-      // flex-direction: column;
-      // align-items: flex-end;
       width: 100%;
       padding-left: 10.5rem;
       padding-right: 6.25rem;
@@ -601,49 +559,25 @@ body {
     &__comment-lable {
       display: flex;
       width: 100%;
-      // color: $color-silver;
-      // font-size: 0.75rem;
-      // line-height: 1.25rem;
     }
     &__comment-text {
       display: flex;
       width: 100%;
-      // height: 6rem;
-      // border-radius: 0.25rem;
       border-radius: 0.3rem;
       background-color: $color-alabaster;
-      // margin-bottom: 4%;
     }
     &__submit-btnDiv {
       display: flex;
       width: 100%;
       padding-left: 18.25rem;
     }
-    // &__submit-btn {
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   font-size: 0.75rem;
-    //   line-height: 1.25rem;
-    //   background-color: $primary-color;
-    //   color: $secondary-color;
-    //   width: 14rem;
-    //   height: 3rem;
-    //   border-radius: 0.25rem;
-    //   border: none;
-    // }
-    // // ==== DOM API section  ====  //
     &__userComs {
-      // display: flex;
-      // flex-direction: column;
       padding-left: 6.25rem;
       padding-right: 6.25rem;
       margin-bottom: 2.5rem;
     }
     &__comment-info {
       display: flex;
-      // border-top: 1px solid $color-mercury;
-      // border-bottom: 1px solid $color-mercury;
     }
     &__userComments {
       display: flex;
@@ -651,7 +585,6 @@ body {
       flex-direction: column;
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
-      // width: 14rem;
       width: 100%;
     }
     &__userText {
@@ -660,7 +593,6 @@ body {
       font-size: 0.875rem;
       line-height: 1.375rem;
       padding-top: 1rem;
-      // width: 100%;
     }
     &__circleDiv {
       display: flex;
@@ -673,33 +605,24 @@ body {
       width: 3rem;
       height: 3rem;
       border-radius: 50%;
-      // margin-top: 1.5rem;
-      // margin-right: 4%;
       background-color: $color-mercury;
     }
     &__nameDate {
       display: flex;
       justify-content: flex-start;
-      // align-items: center;
       width: 100%;
     }
     &__userName {
-      // display: flex;
-      // margin: 0;
       font-size: 0.875rem;
       line-height: 1.375rem;
       font-weight: bold;
       padding-right: 4%;
     }
     &__userTime {
-      // display: flex;
-      // margin: 0;
       font-size: 0.875rem;
       line-height: 1.375rem;
       color: $color-silver;
     }
-
-    //Join the conversation section - tablet//
   }
   @include desktop {
     padding-left: 180px;
@@ -770,13 +693,6 @@ body {
       width: 31.853%;
       height: 19%;
     }
-
-    //Join the conversation section - desktop//
-
-    // &__conversation {
-    //   display: flex;
-    //   flex-direction: column;
-    // }
     &__form {
       display: flex;
       flex-direction: column;
@@ -793,13 +709,8 @@ body {
     }
     &__nameArea {
       display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
       padding-left: 17.25rem;
-      // padding-left: 6.25rem;
       padding-right: 17.25rem;
-      // padding-right: 6.25rem;
       margin-bottom: 1.5rem;
     }
     &__name-label {
@@ -810,16 +721,7 @@ body {
       line-height: 1.25rem;
       width: 100%;
       margin-bottom: 0.5rem;
-      // padding-left: 22%;
-      // padding-left: 5rem;
     }
-    // &__mohan-input {
-    //   display: flex;
-    //   justify-content: space-between;
-    //   align-items: center;
-    //   width: 100%;
-    // }
-
     &__mo-img {
       display: flex;
       width: 3rem;
@@ -830,17 +732,12 @@ body {
     &__mo-input {
       display: flex;
       width: 14rem;
-      // width: 28.75rem;
       height: 3rem;
-      // border-radius: 0.25rem;
       border-radius: 0.3rem;
       border-color: $primary-color;
       width: 100%;
     }
     &__text-area {
-      // display: flex;
-      // flex-direction: column;
-      // align-items: flex-end;
       width: 100%;
       padding-left: 21.5rem;
       padding-right: 17.25rem;
@@ -849,50 +746,26 @@ body {
       display: flex;
       width: 100%;
       margin-bottom: 0.5rem;
-      // color: $color-silver;
-      // font-size: 0.75rem;
-      // line-height: 1.25rem;
     }
     &__comment-text {
       display: flex;
       width: 100%;
-      // height: 6rem;
-      // border-radius: 0.25rem;
       border-radius: 0.3rem;
       padding-left: 1rem;
       background-color: $color-alabaster;
-      // margin-bottom: 4%;
     }
     &__submit-btnDiv {
       display: flex;
       width: 100%;
       padding-left: 18.75rem;
     }
-    // &__submit-btn {
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   font-size: 0.75rem;
-    //   line-height: 1.25rem;
-    //   background-color: $primary-color;
-    //   color: $secondary-color;
-    //   width: 14rem;
-    //   height: 3rem;
-    //   border-radius: 0.25rem;
-    //   border: none;
-    // }
-    // // ==== DOM API section  ====  //
     &__userComs {
-      // display: flex;
-      // flex-direction: column;
       padding-left: 17.25rem;
       padding-right: 17.25rem;
       margin-bottom: 2.5rem;
     }
     &__comment-info {
       display: flex;
-      // border-top: 1px solid $color-mercury;
-      // border-bottom: 1px solid $color-mercury;
     }
     &__userComments {
       display: flex;
@@ -900,7 +773,6 @@ body {
       flex-direction: column;
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
-      // width: 14rem;
       width: 100%;
     }
     &__userText {
@@ -909,26 +781,20 @@ body {
       font-size: 0.875rem;
       line-height: 1.375rem;
       padding-top: 1rem;
-      // width: 100%;
     }
     &__greyCircle {
       display: flex;
       width: 3.18rem;
       height: 3rem;
       border-radius: 50%;
-      // margin-top: 1.5rem;
-      // margin-right: 1rem;
       background-color: $color-mercury;
     }
     &__nameDate {
       display: flex;
       justify-content: flex-start;
-      // align-items: center;
       width: 100%;
     }
     &__userName {
-      // display: flex;
-      // margin: 0;
       font-size: 0.875rem;
       line-height: 1.375rem;
       font-weight: bold;

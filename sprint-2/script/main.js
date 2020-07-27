@@ -1,6 +1,3 @@
-//add prevent default ===HERE=== //
-
-//============================================================================//
 const commentsCont = document.getElementById("comments");
 const userForm = document.getElementById("userForm");
 
@@ -24,10 +21,8 @@ const commentsData = [
 ];
 
 
-
-
 function loopThroughComments(showsArr) {
-    //clearing the input/textarea 
+
     comments.innerHTML = '';
 
     const sortedArry = showsArr.sort(function (a, b) {
@@ -42,32 +37,27 @@ function loopThroughComments(showsArr) {
 }
 
 function createCommentElem(comment) {
-    // create a <div>
+
     const commentsInfoDiv = document.createElement("div");
     commentsInfoDiv.classList.add("main__comment-info");
 
-    // create <img> tag for silver-grey circle and append to "commentElemt"
     const circleDiv = document.createElement("div")
     circleDiv.classList.add("main__circleDiv")
     const imageCircle = document.createElement("div");
     imageCircle.classList.add("main__greyCircle");
 
-    /* create <div> container for and append name/timestamp/imamgeCircle --- 
-    then append <div> container to "commentElemt" */
     const userCommentsDiv = document.createElement("div");
     userCommentsDiv.classList.add("main__userComments");
 
-    // append name/date to this div then append this <div> to <nameDateDiv>
     const nameDateDiv = document.createElement("div");
     nameDateDiv.classList.add("main__nameDate");
 
     // ===================ARRAY OF OBJECTS ====================================//
-    // create a <p> tag for the name
+
     const commentName = document.createElement("p");
     commentName.classList.add("main__userName");
     commentName.innerText = comment.name;
 
-    // create a <p> tag for the timestamp
     const commentTime = document.createElement("p");
     commentTime.classList.add("main__userTime");
     const date = comment.timestamp.getDate();
@@ -80,30 +70,25 @@ function createCommentElem(comment) {
     commentDescription.classList.add("main__userText");
     commentDescription.innerText = comment.description;
 
-    //====================== APENDDING SECTION =======================================//
+    //====================== APENDDING SECTION =============================//
 
     commentsInfoDiv.appendChild(circleDiv);
     commentsInfoDiv.appendChild(userCommentsDiv);
 
-    // append imageCircle to parent <cirCleDiv> 
     circleDiv.appendChild(imageCircle);
 
-    // userCommentsDiv.appendChild(nameDate/Description);
     userCommentsDiv.appendChild(nameDateDiv);
     userCommentsDiv.appendChild(commentDescription)
 
-    // nameDate appendChild <p> tags name/date 
     nameDateDiv.appendChild(commentName);
     nameDateDiv.appendChild(commentTime);
 
-    //==================== FINAL APPEND TO MAIN-DIV ====================================//
-    // glues everything together and appends to the MAIN DIV
+    //==================== FINAL APPEND TO MAIN-DIV ========================//
     commentsCont.appendChild(commentsInfoDiv);
 }
 loopThroughComments(commentsData);
 
-
-//===================================================================================//
+//========================== EVENT LISTENER ===================================//
 userForm.addEventListener('submit', function (event) {
     event.preventDefault();
     const nameInput = event.target.userName.value;
