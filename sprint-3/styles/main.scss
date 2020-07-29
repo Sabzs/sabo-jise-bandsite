@@ -1,0 +1,956 @@
+@import "./partials/reset";
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/fonts";
+
+body {
+  font-size: 16px;
+  font-family: "Linotype";
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.nav {
+  @include mobile {
+    .navbar {
+      @include flexDirection(column);
+      width: 100%;
+      height: 5rem;
+      padding-top: 3%;
+      background: $primary-color;
+      color: $secondary-color;
+      &__logo {
+        display: flex;
+        align-self: center;
+      }
+      &__logo-img {
+        display: flex;
+      }
+      &__list {
+        @include flex-justify(center);
+        height: 65%;
+        padding-left: 0;
+        margin: 0;
+      }
+      &__items {
+        @include flex-justify(center);
+        width: 10rem;
+        //move the active / hover class to here / make the white line active//
+      }
+      &__items-link {
+        display: flex;
+        @include aTags-stns;
+        @include fonts(0.81rem, 1.12rem, normal);
+        @include flex-justify(center);
+        align-items: center;
+        width: 5rem;
+        height: 100%;
+        &:hover {
+          cursor: pointer;
+          color: $color-hoverItems;
+          border-bottom: 3px solid $secondary-color;
+        }
+        &:active {
+          color: $color-active;
+        }
+      }
+    }
+    .hero {
+      display: flex;
+      max-width: 100%;
+      height: 62%;
+      margin: 0 auto;
+      position: relative;
+
+      &__hero-img {
+        width: 100%;
+        padding-top: 18.6%;
+        padding-bottom: 18.6%;
+        background: linear-gradient(
+            rgba($primary-color, 0.5),
+            rgba($primary-color, 0.5)
+          ),
+          url("../assets/images/dark-rider-JmVaNyemtN8-unsplash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      &__header {
+        @include flex-alignItems(center);
+        height: 100%;
+        padding-left: 1rem;
+      }
+      &__title {
+        display: flex;
+        @include fonts(1.5rem, 2rem, bold);
+        color: $secondary-color;
+        width: 75%;
+        @include margin-reset;
+      }
+    }
+  }
+  @include tablet {
+    .navbar {
+      @include flexDirection(row);
+      width: 100%;
+      height: 5rem;
+      padding-top: 0;
+      padding-left: 1.5rem;
+      &__logo {
+        display: flex;
+      }
+      &__logo-img {
+        display: flex;
+      }
+      &__list {
+        justify-content: space-around;
+        height: 100%;
+        width: 40%;
+        padding-top: 0;
+      }
+      &__items {
+        display: flex;
+        width: 5rem;
+        height: 100%;
+      }
+      &__items-link {
+        display: flex;
+        @include aTags-stns;
+        @include fonts(0.875rem, 1.375rem, normal);
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .hero {
+      display: flex;
+      max-width: 100%;
+      height: 62%;
+      margin: 0 auto;
+      &__hero-img {
+        width: 100%;
+        padding: 17.06% 0;
+      }
+      &__header {
+        @include flex-justifyAlign(none, center);
+        height: 100%;
+        width: 80%;
+        padding-left: 1.5rem;
+      }
+      &__title {
+        @include flex-alignItems(center);
+        @include fonts(3.75rem, 4.25rem, bold);
+        color: $secondary-color;
+        width: 95%;
+        height: auto;
+      }
+    }
+  }
+  @include desktop {
+    .navbar {
+      display: flex;
+      width: 100%;
+      padding-left: 0;
+      &__logo {
+        display: flex;
+        padding-left: 11.25rem;
+        margin-right: 3.5rem;
+      }
+      &__list {
+        @include flex-justify(flex-start);
+      }
+      &__items {
+        @include flex-justify(flex-start);
+        margin-right: 3.5rem;
+      }
+    }
+    .hero {
+      display: flex;
+      max-width: 100%;
+      height: 62%;
+      margin: 0 auto;
+      &__hero-img {
+        width: 100%;
+        padding: 18.475% 0;
+      }
+      &__header {
+        @include flex-alignItems(center);
+        height: 100%;
+        padding-left: 11.25rem;
+      }
+      &__title {
+        display: flex;
+        color: $secondary-color;
+        width: 60%;
+      }
+    }
+  }
+}
+.main {
+  @include mobile {
+    @include flexDirection(column);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    &__musicians {
+      @include flexDirection(column);
+    }
+    &__about-musicians {
+      display: flex;
+      @include fonts(1.5rem, 2rem, bold);
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    &__the-band {
+      @include flexDirection(column);
+      width: 100%;
+    }
+    &__the-members {
+      display: flex;
+      width: 100%;
+      height: 66%;
+    }
+    &__the-members-img {
+      width: 100%;
+      padding-top: 66%;
+      background-image: url("../assets/images/vaishnav-chogale-sJHHlLFVPoc-unsplash.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: grayscale(100%);
+      &:hover {
+        cursor: pointer;
+        filter: grayscale(0%);
+      }
+    }
+    &__quote {
+      display: flex;
+      @include fonts(0.875rem, 1.37rem, bold);
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+      width: 90%;
+    }
+    &__quote-author {
+      display: flex;
+      @include fonts(0.875rem, 1.37rem, bold);
+      @include margin-reset;
+    }
+    &__bio {
+      @include flexDirection(column);
+      margin-bottom: 2.5rem;
+    }
+    &__bio-authors {
+      display: flex;
+      @include fonts(0.875rem, 1.37rem, bold);
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    &__articles {
+      @include flexDirection(column);
+    }
+    &__story {
+      display: flex;
+      @include fonts(0.81rem, 1.12rem, normal);
+      width: 100%;
+      @include margin-reset;
+      &--pd-right {
+        padding-bottom: 1.5rem;
+      }
+    }
+    &__galary {
+      @include flexDirection(column);
+      margin-bottom: 2.5rem;
+      background-color: $color-alabaster;
+    }
+    &__galary-header {
+      display: flex;
+      @include fonts(1.5rem, 2rem, bold);
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    &__photos {
+      @include flexDirection(column);
+    }
+    &__galary-img {
+      display: flex;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      width: 100%;
+      filter: grayscale(100%);
+      &:hover {
+        cursor: pointer;
+        filter: grayscale(0%);
+      }
+    }
+    //Join the conversation section - mobile//
+    &__conversation {
+      display: flex;
+      flex-direction: column;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    &__form-header {
+      display: flex;
+      margin-bottom: 2.5rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: bold;
+    }
+    &__nameArea {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    &__name-label {
+      display: flex;
+      color: $color-silver;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+      width: 100%;
+      padding-left: 4.25rem;
+    }
+    &__mo-container {
+      display: flex;
+      // justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    &__mo-ImgDiv {
+      display: flex;
+      justify-content: center;
+      margin-right: 1.25rem;
+    }
+    &__mo-img {
+      display: flex;
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    &__mo-input {
+      display: flex;
+      width: 100%;
+      height: 3rem;
+      padding-left: 1rem;
+      border-radius: 0.3rem;
+      border-color: $primary-color;
+    }
+    &__text-area {
+      display: flex;
+      flex-direction: column;
+      padding-left: 4.25rem;
+      width: 100%;
+    }
+    &__comment-lable {
+      display: flex;
+      width: 14rem;
+      color: $color-silver;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+    &__comment-text {
+      display: flex;
+      width: 100%;
+      height: 6rem;
+      padding-top: 1rem;
+      padding-left: 1rem;
+      border-radius: 0.3rem;
+      background-color: $color-alabaster;
+      margin-bottom: 1.5rem;
+    }
+    &__submit-btnDiv {
+      display: flex;
+      width: 100%;
+    }
+    &__submit-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+      width: 100%;
+      height: 3rem;
+      border-radius: 0.25rem;
+      border: none;
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+    // ==== DOM API section  ====  //
+    &__userComs {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.5rem;
+    }
+    &__comment-info {
+      display: flex;
+      width: 100%;
+      border-top: 1px solid $color-mercury;
+      border-bottom: 1px solid $color-mercury;
+    }
+    &__circleDiv {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+      margin-right: 1.25rem;
+    }
+    &__greyCircle {
+      display: flex;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: $color-mercury;
+    }
+    &__userComments {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      width: 100%;
+    }
+    &__userText {
+      display: flex;
+      margin: 0;
+      width: 100%;
+      font-size: 0.812rem;
+      line-height: 1.125rem;
+      padding-top: 1rem;
+    }
+    &__nameDate {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__userName {
+      display: flex;
+      margin: 0;
+      font-size: 0.81rem;
+      line-height: 1.125rem;
+      font-weight: bold;
+    }
+    &__userTime {
+      display: flex;
+      margin: 0;
+      font-size: 0.81rem;
+      line-height: 1.125rem;
+      color: $color-silver;
+    }
+    //Join the conversation section - mobile  ==================//
+  }
+  @include tablet {
+    &__about-musicians {
+      display: flex;
+      @include fonts(2.25rem, 2.75rem, bold);
+    }
+    &__the-band {
+      @include flexDirection(column);
+      width: 100%;
+    }
+    &__the-members {
+      display: flex;
+      width: 100%;
+      height: 66%;
+      margin: 0 auto;
+    }
+    &__the-members-img {
+      width: 100%;
+      padding-top: 49.19%;
+    }
+    &__quote {
+      display: flex;
+      @include fonts(1.5rem, 2rem, bold);
+      width: 95%;
+    }
+    &__quote-author {
+      display: flex;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    &__bio-authors {
+      display: flex;
+      @include fonts(1.5rem, 2rem, bold);
+    }
+    &__articles {
+      @include flexDirection(row);
+    }
+    &__story {
+      @include flexDirection(row);
+      @include fonts(0.875rem, 1.375rem, normal);
+      width: 100%;
+      &--pd-right {
+        padding-right: 12px;
+        padding-bottom: 0;
+      }
+      &--pd-left {
+        padding-left: 12px;
+      }
+    }
+    &__galary {
+      @include flexDirection(column);
+    }
+    &__galary-header {
+      display: flex;
+      @include fonts(2.25rem, 2.75rem, bold);
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    &__photos {
+      @include flexwrap-rowJustify;
+    }
+    &__galary-img {
+      display: flex;
+      object-fit: contain;
+      margin-bottom: 1.5rem;
+      width: 30.435%;
+      height: 26%;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    &__form-header {
+      display: flex;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      margin-bottom: 2.5rem;
+      font-weight: bold;
+    }
+    &__nameArea {
+      padding-left: 6.25rem;
+      padding-right: 6.25rem;
+      margin-bottom: 1.25rem;
+    }
+    &__name-label {
+      display: flex;
+      align-self: center;
+      color: $color-silver;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      width: 100%;
+    }
+    &__mo-img {
+      display: flex;
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    &__mo-input {
+      display: flex;
+      width: 14rem;
+      height: 3rem;
+      border-radius: 0.3rem;
+      border-color: $primary-color;
+      width: 100%;
+    }
+    &__text-area {
+      width: 100%;
+      padding-left: 10.5rem;
+      padding-right: 6.25rem;
+    }
+    &__comment-lable {
+      display: flex;
+      width: 100%;
+    }
+    &__comment-text {
+      display: flex;
+      width: 100%;
+      border-radius: 0.3rem;
+      background-color: $color-alabaster;
+    }
+    &__submit-btnDiv {
+      display: flex;
+      width: 100%;
+      padding-left: 18.25rem;
+    }
+    &__userComs {
+      padding-left: 6.25rem;
+      padding-right: 6.25rem;
+      margin-bottom: 2.5rem;
+    }
+    &__comment-info {
+      display: flex;
+    }
+    &__userComments {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      width: 100%;
+    }
+    &__userText {
+      display: flex;
+      margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      padding-top: 1rem;
+    }
+    &__circleDiv {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+      margin-right: 1rem;
+    }
+    &__greyCircle {
+      display: flex;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: $color-mercury;
+    }
+    &__nameDate {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+    }
+    &__userName {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      font-weight: bold;
+      padding-right: 4%;
+    }
+    &__userTime {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      color: $color-silver;
+    }
+  }
+  @include desktop {
+    padding-left: 180px;
+    padding-right: 180px;
+    &__about-musicians {
+      display: flex;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    &__the-band {
+      @include flexDirection(column);
+      width: 100%;
+      padding-left: 8%;
+      padding-right: 8%;
+    }
+    &__the-members {
+      display: flex;
+      width: 100%;
+      height: 66%;
+    }
+    &__the-members-img {
+      width: 100%;
+      padding-top: 49.61%;
+    }
+    &__quote {
+      display: flex;
+      margin-top: 3rem;
+      margin-bottom: 2.5rem;
+      width: 85%;
+    }
+    &__quote-author {
+      display: flex;
+      @include fonts(0.875rem, 1.37rem, bold);
+    }
+    &__bio {
+      width: 880px;
+      margin-left: 8%;
+      margin-bottom: 3rem;
+    }
+    &__bio-authors {
+      display: flex;
+      @include fonts(1.5rem, 2rem, bold);
+    }
+    &__articles {
+      @include flexDirection(row);
+      margin-bottom: 3rem;
+    }
+    &__story {
+      display: flex;
+      @include fonts(0.875rem, 1.37rem, normal);
+      width: 47.86%;
+      &--pd-right {
+        padding-right: 1.25rem;
+      }
+      &--pd-left {
+        padding-left: 1.25rem;
+      }
+    }
+    &__galary-header {
+      display: flex;
+      @include fonts(2.25rem, 2.75rem, bold);
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+    &__galary-img {
+      display: flex;
+      object-fit: contain;
+      width: 31.853%;
+      height: 19%;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    &__form-header {
+      display: flex;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      margin-top: 3rem;
+      margin-bottom: 3.5rem;
+      font-weight: bold;
+    }
+    &__nameArea {
+      display: flex;
+      padding-left: 17.25rem;
+      padding-right: 17.25rem;
+      margin-bottom: 1.5rem;
+    }
+    &__name-label {
+      display: flex;
+      align-self: center;
+      color: $color-silver;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    &__mo-img {
+      display: flex;
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    &__mo-input {
+      display: flex;
+      width: 14rem;
+      height: 3rem;
+      border-radius: 0.3rem;
+      border-color: $primary-color;
+      width: 100%;
+    }
+    &__text-area {
+      width: 100%;
+      padding-left: 21.5rem;
+      padding-right: 17.25rem;
+    }
+    &__comment-lable {
+      display: flex;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    &__comment-text {
+      display: flex;
+      width: 100%;
+      border-radius: 0.3rem;
+      padding-left: 1rem;
+      background-color: $color-alabaster;
+    }
+    &__submit-btnDiv {
+      display: flex;
+      width: 100%;
+      padding-left: 18.75rem;
+    }
+    &__userComs {
+      padding-left: 17.25rem;
+      padding-right: 17.25rem;
+      margin-bottom: 2.5rem;
+    }
+    &__comment-info {
+      display: flex;
+    }
+    &__userComments {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      width: 100%;
+    }
+    &__userText {
+      display: flex;
+      margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      padding-top: 1rem;
+    }
+    &__greyCircle {
+      display: flex;
+      width: 3.18rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: $color-mercury;
+    }
+    &__nameDate {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+    }
+    &__userName {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      font-weight: bold;
+      padding-right: 4%;
+    }
+    &__userTime {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      color: $color-silver;
+    }
+  }
+}
+.footer {
+  @include mobile {
+    padding-top: 10%;
+    @include flexDirection(column);
+    width: 100%;
+    background-color: $primary-color;
+    color: $secondary-color;
+    &__info {
+      @include flexDirection(column);
+      padding-right: 1rem;
+      padding-left: 1rem;
+      width: 100%;
+    }
+    &__info-content {
+      @include flexDirection(column);
+    }
+    &__header {
+      display: flex;
+      @include fonts(1.5rem, 2rem, bold);
+    }
+    &__icons {
+      display: flex;
+      width: 100%;
+      padding-top: 5%;
+      padding-bottom: 10%;
+    }
+    &__icon-img {
+      display: flex;
+      margin-right: 10%;
+    }
+    &__logoDiv {
+      display: none;
+    }
+    &__details {
+      @include flexDirection(column);
+      margin-bottom: 8%;
+    }
+    @include details-contents-mobile;
+
+    &__copyright {
+      display: flex;
+      @include fonts(0.81rem, 1.12rem, normal);
+      width: 70%;
+      padding-left: 5%;
+      margin-top: 0%;
+      padding-bottom: 5%;
+    }
+  }
+  @include tablet {
+    display: flex;
+    padding-top: 5%;
+    &__info-content {
+      @include flexDirection(row);
+      justify-content: space-between;
+      width: 100%;
+    }
+    &__header {
+      display: flex;
+      @include fonts(2.25rem, 2.75rem, bold);
+      width: 30%;
+      @include margin-reset;
+    }
+    &__icons {
+      @include flex-justify(space-evenly);
+      width: 30%;
+      @include padding-reset;
+      @include margin-reset;
+    }
+    &__icon-img {
+      display: flex;
+      margin-right: 0%;
+    }
+    &__logoDiv {
+      display: flex;
+      justify-content: flex-end;
+      width: 30%;
+      padding-right: 0.5rem;
+    }
+    &__logo-link {
+      @include flex-justify(flex-direction);
+    }
+    &__details {
+      display: flex;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      margin-bottom: 0;
+    }
+    @include details-contents-tablet;
+
+    &__copyright {
+      display: flex;
+      @include fonts(0.875rem, 1.25rem, normal);
+      width: 70%;
+      padding-left: 2%;
+      margin-top: 0%;
+      padding-bottom: 5%;
+    }
+  }
+  @include desktop {
+    margin-top: 3rem;
+    padding-left: 11.25rem;
+    padding-right: 11.25rem;
+    &__info {
+      @include padding-reset;
+    }
+    &__info-content {
+      @include flex-justify(start);
+      width: 100%;
+    }
+    &__header {
+      width: 25%;
+    }
+    &__icons {
+      @include flex-justify(start);
+      width: 25%;
+    }
+    &__icon-img {
+      margin-right: 32px;
+    }
+    &__logoDiv {
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+      padding-right: 0;
+    }
+    &__logo-link {
+      // width: 50%;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    &__logo {
+      width: 120px;
+      height: 24px;
+    }
+    &__details {
+      @include flex-justify(none);
+      width: 25%;
+    }
+    &__address-cont {
+      margin-top: 7%;
+      margin-bottom: 7%;
+    }
+    &__copyright {
+      padding-left: 0;
+    }
+  }
+}
