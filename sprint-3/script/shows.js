@@ -1,40 +1,6 @@
 const commentsCont = document.getElementById("shows");
 
 
-// const commentsData = [
-
-//     {
-//         DATE: "Mon Dec 17 2018",
-//         VENUE: "Ronald Lane",
-//         LOCATION: "San Francisco, CA"
-//     },
-//     {
-//         DATE: "Tue Jul 18 2019",
-//         VENUE: "Pier 3 East",
-//         LOCATION: "San Francisco, CA"
-//     },
-//     {
-//         DATE: "Fri Jul 22 2019",
-//         VENUE: "View Loungue",
-//         LOCATION: "San Francisco, CA"
-//     },
-//     {
-//         DATE: "Sat Aug 12 2019",
-//         VENUE: "Renald Lane",
-//         LOCATION: "San Francisco, CA"
-//     },
-//     {
-//         DATE: "Fri 05 2019",
-//         VENUE: "Moscow Center",
-//         LOCATION: "San Francisco, CA"
-//     },
-//     {
-//         DATE: "Wed Aug 11 2019",
-//         VENUE: "Pres Club",
-//         LOCATION: "San Francisco, CA"
-//     },
-// ];
-
 
 // function loopThroughComments(commentsArr) {
 

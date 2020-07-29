@@ -21,19 +21,25 @@ const userForm = document.getElementById("userForm");
 // = (event) => 
 //=============================================
 
-const handleFormSubmit = (event) => {
-    event.preventDefault(); // keeps the page from reloading
-    const nameInput = event.target.userName.value;
-    const commentInput = event.target.userComment.value;
 
-    userForm.push(
-        {
-            name: nameInput,
-            timestamp: new Date(Date.now()),
-            comment: commentInput,
-        },
-    );
-};
+
+function loopThroughComments(showsArr) {
+
+    comments.innerHTML = '';
+
+    const sortedArry = showsArr.sort(function (a, b) {
+        return b.timestamp - a.timestamp;
+    });
+
+
+    for (let i = 0; i < sortedArry.length; i++) {
+        sortedArry[i].anotherKey = "new value";
+        createCommentElem(sortedArry[i]);
+    }
+}
+
+
+
 axios
     .get(
         "https://project-1-api.herokuapp.com/comments?api_key=812f588e-483e-4c64-b13d-437c4e8554e5"
@@ -66,10 +72,6 @@ axios
 
             const commentTime = document.createElement("p");
             commentTime.classList.add("main__userTime");
-            // const month = infoArray.timestamp.getMonth() + 1;
-            // const date = infoArray.timestamp.getDate();
-            // const year = infoArray.timestamp.getFullYear();
-            // commentTime.innerText = (`${month}, ${date}, ${year}`);
             commentTime.innerText = element.timestamp;
 
             // create a <p> tag for the comment description
@@ -99,7 +101,7 @@ axios
 
 
 // };
-userForm.addEventListener('submit', handleFormSubmit);
+// userForm.addEventListener('submit', handleFormSubmit);
 
 
 // // 
@@ -107,19 +109,19 @@ userForm.addEventListener('submit', handleFormSubmit);
 // // loopThroughComments(commentsData);
 
 // //==========================Form Submit EVENT LISTENER ===================================//
-// userForm.addEventListener('submit', function (event) {
-//     event.preventDefault();
-//     const nameInput = event.target.userName.value;
-//     const commentInput = event.target.userComment.value;
-//     commentsData.push(
-//         {
-//             name: nameInput,
-//             timestamp: new Date(Date.now()),
-//             description: commentInput,
-//         },
-//     );
-//     // //  loopThroughComments(commentsData);//
-// });
+userForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const nameInput = event.target.userName.value;
+    const commentInput = event.target.userComment.value;
+    infoArray.push(
+        {
+            name: nameInput,
+            timestamp: new Date(Date.now()),
+            description: commentInput,
+        },
+    );
+    loopThroughComments(commentsData);//
+});
 
 // // // loopThroughComments(commentsData);//
 
