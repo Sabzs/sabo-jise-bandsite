@@ -78,7 +78,6 @@ axios
             showsEventsDiv.appendChild(eventLocation);
             showsEventsDiv.appendChild(showLocation);
 
-
             //==================== FINAL APPEND TO MAIN-DIV ====================================//
             commentsCont.appendChild(showsInfoDiv);
         });
