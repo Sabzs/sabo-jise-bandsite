@@ -93,14 +93,18 @@ userForm.addEventListener('submit', function (event) {
     event.preventDefault();
     const nameInput = event.target.userName.value;
     const commentInput = event.target.userComment.value;
-    commentsData.push(
-        {
-            name: nameInput,
-            timestamp: new Date(Date.now()),
-            description: commentInput,
-        },
-    );
-    loopThroughComments(commentsData);
+    if (nameInput === "" || commentInput === "") {
+        alert("please fill your name and comments");
+    } else {
+        commentsData.push(
+            {
+                name: nameInput,
+                timestamp: new Date(Date.now()),
+                description: commentInput,
+            },
+        );
+        loopThroughComments(commentsData);
+    }
 });
 
 loopThroughComments(commentsData);
