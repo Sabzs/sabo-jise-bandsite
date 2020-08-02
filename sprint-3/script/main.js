@@ -2,41 +2,46 @@ const parentDiv = document.getElementById("comments");
 const userForm = document.getElementById("userForm");
 
 
-function loopThroughComments(showsArr) {
 
-    comments.innerHTML.value = '';
+function commentsLoop(showsArr) {
+
+    userForm.innerHTML.value = '';
+    userForm.reset();
+
 
     const sortedArry = showsArr.sort(function (a, b) {
-        // return b.timestamp - a.timestamp;
-        return b.date - a.date;
+        return a.timestamp - b.timestamp;
+        // return b.date - a.date;
     });
-
 
     for (let i = 0; i < sortedArry.length; i++) {
         sortedArry[i].anotherKey = "new value";
         createCommentElem(sortedArry[i]);
-
-        // const messageLi = document.createElement("li")
-        // messageLi.innerText = sortedArry[i].comments;
-        // messageList.appendChild(messageLi);
-
     }
-}
 
-// loopThroughComments(commentsData);
+}
+userForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.log("form Submitted");
+    const nameInput = event.target.userName.value;
+    const commentInput = event.target.userComment.value;
+    if (nameInput === "" || commentInput === "") {
+        alert("please fill your name and comments");
+    } else {
+        postComment({ name: nameInput, comment: commentInput });
+    }
+    userForm.reset();
+});
 
 function getComments() {
-
     axios
         .get(
             "https://project-1-api.herokuapp.com/comments?api_key=812f588e-483e-4c64-b13d-437c4e8554e5"
         )
         .then(response => {
-            console.log(response.data);
-            parentDiv.innerHTML = "";
+            console.log(response);
             let infoArray = response.data;
             infoArray.forEach(element => {
-
                 const commentsInfoDiv = document.createElement("div");
                 commentsInfoDiv.classList.add("main__comment-info");
 
@@ -60,7 +65,6 @@ function getComments() {
                 const commentTime = document.createElement("p");
                 commentTime.classList.add("main__userTime");
                 commentTime.innerText = element.timestamp;
-                commentTime.innerText = element.timestamp;
 
                 // create a <p> tag for the comment description
                 const commentDescription = document.createElement("p");
@@ -82,40 +86,23 @@ function getComments() {
 
                 //==================== FINAL APPEND TO MAIN-DIV ========================//
                 parentDiv.appendChild(commentsInfoDiv);
-
             })
-
         })
         .catch(function (error) {
             console.log(error);
         });
 }
 getComments();
-// getComments();
-// loopThroughComments(comments);
 
-//========================== EVENT LISTENER ===================================//
-userForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    console.log("form Submitted");
-    const nameInput = event.target.userName.value;
-    const commentInput = event.target.userComment.value;
-    if (nameInput === "" || commentInput === "") {
-        alert("please fill your name and comments");
-    } else {
-        postComment({ name: nameInput, comment: commentInput });
-    }
-
-});
 
 function postComment(postObj) {
-    // console.log(postObj);
+    console.log(postObj);
     axios
         .post(`https://project-1-api.herokuapp.com/comments?api_key=812f588e-483e-4c64-b13d-437c4e8554e5`, postObj)
         .then((response) => {
             console.log(response)
-            getComments()
+            getComments();
         }).catch((error) => { console.log(error) })
+    // getComments();
 }
-
-// loopThroughComments(commentsData);
+userForm.reset();
