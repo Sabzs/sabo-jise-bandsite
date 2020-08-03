@@ -1,0 +1,147 @@
+.footer {
+  @include mobile {
+    padding-top: 10%;
+    @include flexDirection(column);
+    width: 100%;
+    background-color: $primary-color;
+    color: $secondary-color;
+    &__info {
+      @include flexDirection(column);
+      padding-right: 1rem;
+      padding-left: 1rem;
+      width: 100%;
+    }
+    &__info-content {
+      @include flexDirection(column);
+    }
+    &__header {
+      display: flex;
+      @include fonts(1.5rem, 2rem, bold);
+    }
+    &__icons {
+      display: flex;
+      width: 100%;
+      padding-top: 5%;
+      padding-bottom: 10%;
+    }
+    &__icon-img {
+      display: flex;
+      margin-right: 10%;
+    }
+    &__logoDiv {
+      display: none;
+    }
+    &__details {
+      @include flexDirection(column);
+      margin-bottom: 8%;
+    }
+    @include details-contents-mobile;
+
+    &__copyright {
+      display: flex;
+      @include fonts(0.81rem, 1.12rem, normal);
+      width: 70%;
+      padding-left: 5%;
+      margin-top: 0%;
+      padding-bottom: 5%;
+    }
+  }
+  @include tablet {
+    display: flex;
+    padding-top: 5%;
+    &__info-content {
+      @include flexDirection(row);
+      justify-content: space-between;
+      width: 100%;
+    }
+    &__header {
+      display: flex;
+      @include fonts(2.25rem, 2.75rem, bold);
+      width: 30%;
+      @include margin-reset;
+    }
+    &__icons {
+      @include flex-justify(space-evenly);
+      width: 30%;
+      @include padding-reset;
+      @include margin-reset;
+    }
+    &__icon-img {
+      display: flex;
+      margin-right: 0%;
+    }
+    &__logoDiv {
+      display: flex;
+      justify-content: flex-end;
+      width: 30%;
+      padding-right: 0.5rem;
+    }
+    &__logo-link {
+      @include flex-justify(flex-direction);
+    }
+    &__details {
+      display: flex;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      margin-bottom: 0;
+    }
+    @include details-contents-tablet;
+
+    &__copyright {
+      display: flex;
+      @include fonts(0.875rem, 1.25rem, normal);
+      width: 70%;
+      padding-left: 2%;
+      margin-top: 0%;
+      padding-bottom: 5%;
+    }
+  }
+  @include desktop {
+    margin-top: 3rem;
+    padding-left: 11.25rem;
+    padding-right: 11.25rem;
+    &__info {
+      @include padding-reset;
+    }
+    &__info-content {
+      @include flex-justify(start);
+      width: 100%;
+    }
+    &__header {
+      width: 25%;
+    }
+    &__icons {
+      @include flex-justify(start);
+      width: 25%;
+    }
+    &__icon-img {
+      margin-right: 32px;
+    }
+    &__logoDiv {
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+      padding-right: 0;
+    }
+    &__logo-link {
+      // width: 50%;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    &__logo {
+      width: 120px;
+      height: 24px;
+    }
+    &__details {
+      @include flex-justify(none);
+      width: 25%;
+    }
+    &__address-cont {
+      margin-top: 7%;
+      margin-bottom: 7%;
+    }
+    &__copyright {
+      padding-left: 0;
+    }
+  }
+}

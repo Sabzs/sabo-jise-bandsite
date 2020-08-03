@@ -1,0 +1,152 @@
+@import "./global-variables";
+
+//=========================================
+
+@mixin hero-shows-mobile {
+  .hero {
+    display: flex;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    &__hero-img {
+      width: 100%;
+      padding-bottom: 20%;
+      background: linear-gradient(
+          rgba($primary-color, 0.5),
+          rgba($primary-color, 0.5)
+        ),
+        url("../assets/images/rocco-caruso-h4jXGhm8wuA-unsplash.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    &__header {
+      @include flexDirection(column);
+    }
+    &__headerIntro {
+      display: flex;
+      flex-direction: column;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+    &__womenAlbum {
+      display: flex;
+      color: $secondary-color;
+      padding-bottom: 1rem;
+      @include fonts(0.8125rem, 1.125rem, none);
+    }
+    &__title {
+      display: flex;
+      @include fonts(1.5rem, 2rem, bold);
+      color: $secondary-color;
+      width: 72%;
+      @include margin-reset;
+    }
+    &__musicPlayer {
+      display: flex;
+      height: 6rem;
+      width: 18rem;
+    }
+    &__iframe {
+      display: flex;
+      height: 6rem;
+      width: 18rem;
+    }
+  }
+}
+//=====================================
+
+@mixin hero-shows-tablet {
+  .hero {
+    display: flex;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    &__hero-img {
+      width: 100%;
+      padding-bottom: 10%;
+    }
+    &__header {
+      flex-direction: column;
+      display: flex;
+      height: 100%;
+      width: 80%;
+      padding-left: 1.5rem;
+    }
+    &__headerIntro {
+      display: flex;
+      margin-top: 6rem;
+      width: 100%;
+    }
+    &__womenAlbum {
+      display: flex;
+      color: $secondary-color;
+      padding-bottom: 1rem;
+      @include fonts(1rem, 1.5rem, bold);
+    }
+    &__title {
+      @include flex-alignItems(center);
+      @include fonts(3.75rem, 4.25rem, bold);
+      color: $secondary-color;
+      width: 100%;
+      height: auto;
+    }
+    &__musicPlayer {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 1.5rem;
+      width: 60%;
+      margin-left: 0;
+    }
+  }
+}
+
+//======================================
+@mixin hero-shows-desktop {
+  .hero {
+    display: flex;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    &__hero-img {
+      width: 100%;
+      padding-bottom: 10%;
+    }
+    &__headerIntro {
+      display: flex;
+      width: 100%;
+    }
+    &__header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      height: 80%;
+      padding-left: 11.25rem;
+      padding-right: 11.25rem;
+    }
+    &__womenAlbum {
+      display: flex;
+      color: $secondary-color;
+      padding-top: 10rem;
+      padding-bottom: 3rem;
+      @include fonts(1.5rem, 2rem, bold);
+    }
+    &__title {
+      display: flex;
+      color: $secondary-color;
+      width: 95%;
+    }
+    &__musicPlayer {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 1.5rem;
+      width: 71%;
+      height: 25%;
+      margin-left: 0;
+      margin-top: 18em;
+    }
+  }
+}

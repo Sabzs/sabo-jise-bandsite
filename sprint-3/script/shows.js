@@ -1,18 +1,5 @@
 const commentsCont = document.getElementById("shows");
 
-
-
-// function loopThroughComments(commentsArr) {
-
-//     shows.innerHTML = '';
-
-//     for (let i = 0; i < commentsArr.length; i++) {
-//         commentsArr[i].anotherKey = "new value";
-//         createCommentElem(commentsArr[i]);
-//     }
-// }
-// function createCommentElem(comment) 
-
 axios
     .get(
         "https://project-1-api.herokuapp.com/showdates?api_key=812f588e-483e-4c64-b13d-437c4e8554e5"
@@ -27,7 +14,7 @@ axios
             const showsEventsDiv = document.createElement("div");
             showsEventsDiv.classList.add("main__tourEvents");
 
-            // ===================ARRAY OF OBJECTS ====================================//
+            // ===================ARRAY OF OBJECTS =====================//
             const showDate = document.createElement("p");
             showDate.classList.add("main__eventDates");
             showDate.innerText = element.date;
@@ -46,8 +33,7 @@ axios
             buyTicket.classList.add("main__btn-ticket");
             buyTicket.innerHTML = "BUY TICKETS";
 
-            // ======================ARRAY HEADERS ===================  //
-
+            // ======================ARRAY HEADERS =====================//
             // Date header ...... //
             const eventDate = document.createElement("p");
             eventDate.classList.add("main__dateHeaders");
@@ -63,9 +49,7 @@ axios
             eventLocation.classList.add("main__eventHeaders");
             eventLocation.innerText = "LOCATION";
 
-
-            //====================== APENDDING SECTION =======================================//
-
+            //====================== APENDDING SECTION ====================//
             showsInfoDiv.appendChild(showsEventsDiv);
             showsInfoDiv.appendChild(buttonDiv);
 
@@ -78,21 +62,7 @@ axios
             showsEventsDiv.appendChild(eventLocation);
             showsEventsDiv.appendChild(showLocation);
 
-            //==================== FINAL APPEND TO MAIN-DIV ====================================//
+            //==================== FINAL APPEND TO MAIN-DIV ===============//
             commentsCont.appendChild(showsInfoDiv);
         });
     });
-// loopThroughComments(commentsData);
-
-
-//===================================================================================//
-// shows.addEventListener('submit', function (event) {
-//     event.preventDefault();
-
-//     // // loopThroughComments(comments);
-// });
-
-// loopThroughComments(commentsData);
-
-//=========================================================
-

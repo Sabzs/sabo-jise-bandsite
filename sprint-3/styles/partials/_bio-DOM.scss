@@ -1,0 +1,168 @@
+@import "./global-variables";
+
+//============================
+@mixin dom-api-mobile {
+  &__userComs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+  }
+  &__comment-info {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid $color-mercury;
+    border-bottom: 1px solid $color-mercury;
+  }
+  &__circleDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-right: 1.25rem;
+  }
+  &__greyCircle {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: $color-mercury;
+  }
+  &__userComments {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+  }
+  &__userText {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    font-size: 0.812rem;
+    line-height: 1.125rem;
+    padding-top: 1rem;
+  }
+  &__nameDate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__userName {
+    display: flex;
+    margin: 0;
+    font-size: 0.81rem;
+    line-height: 1.125rem;
+    font-weight: bold;
+  }
+  &__userTime {
+    display: flex;
+    margin: 0;
+    font-size: 0.81rem;
+    line-height: 1.125rem;
+    color: $color-silver;
+  }
+}
+//========================================
+@mixin dom-api-tablet {
+  &__userComs {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    margin-bottom: 2.5rem;
+  }
+  &__comment-info {
+    display: flex;
+  }
+  &__userComments {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+  }
+  &__userText {
+    display: flex;
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    padding-top: 1rem;
+  }
+  &__circleDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+  }
+  &__greyCircle {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: $color-mercury;
+  }
+  &__nameDate {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  &__userName {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: bold;
+    padding-right: 4%;
+  }
+  &__userTime {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    color: $color-silver;
+  }
+}
+//========================================
+@mixin dom-api-desktop {
+  &__userComs {
+    padding-left: 17.25rem;
+    padding-right: 17.25rem;
+    margin-bottom: 2.5rem;
+  }
+  &__comment-info {
+    display: flex;
+  }
+  &__userComments {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+  }
+  &__userText {
+    display: flex;
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    padding-top: 1rem;
+  }
+  &__greyCircle {
+    display: flex;
+    width: 3.18rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: $color-mercury;
+  }
+  &__nameDate {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  &__userName {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: bold;
+    padding-right: 4%;
+  }
+  &__userTime {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    color: $color-silver;
+  }
+}

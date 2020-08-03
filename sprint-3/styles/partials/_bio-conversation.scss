@@ -1,0 +1,240 @@
+@import "./global-variables";
+//=================================
+
+@mixin conversation-mobile {
+  &__conversation {
+    display: flex;
+    flex-direction: column;
+    @include flex-direction(column);
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  &__form-header {
+    display: flex;
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+  }
+  &__nameArea {
+    @include flex-justifyAlign(center, center);
+    flex-direction: column;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  &__name-label {
+    display: flex;
+    color: $color-silver;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    width: 100%;
+    padding-left: 4.25rem;
+  }
+  &__mo-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  &__mo-ImgDiv {
+    display: flex;
+    justify-content: center;
+    margin-right: 1.25rem;
+  }
+  &__mo-img {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__mo-input {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    padding-left: 1rem;
+    border-radius: 0.3rem;
+    border-color: $primary-color;
+  }
+  &__text-area {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4.25rem;
+    width: 100%;
+  }
+  &__comment-lable {
+    display: flex;
+    width: 14rem;
+    color: $color-silver;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+  &__comment-text {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border-radius: 0.3rem;
+    background-color: $color-alabaster;
+    margin-bottom: 1.5rem;
+  }
+  &__submit-btnDiv {
+    display: flex;
+    width: 100%;
+  }
+  &__submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: $primary-color;
+    color: $secondary-color;
+  }
+}
+//=================================
+@mixin conversation-tablet {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  &__form-header {
+    display: flex;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-bottom: 2.5rem;
+    font-weight: bold;
+  }
+  &__nameArea {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    margin-bottom: 1.25rem;
+  }
+  &__name-label {
+    display: flex;
+    align-self: center;
+    color: $color-silver;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    width: 100%;
+  }
+  &__mo-img {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__mo-input {
+    display: flex;
+    width: 14rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    border-color: $primary-color;
+    width: 100%;
+  }
+  &__text-area {
+    width: 100%;
+    padding-left: 10.5rem;
+    padding-right: 6.25rem;
+  }
+  &__comment-lable {
+    display: flex;
+    width: 100%;
+  }
+  &__comment-text {
+    display: flex;
+    width: 100%;
+    border-radius: 0.3rem;
+    background-color: $color-alabaster;
+  }
+  &__submit-btnDiv {
+    display: flex;
+    width: 100%;
+    padding-left: 18.25rem;
+  }
+}
+//====================================
+
+@mixin conversation-desktop {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  &__form-header {
+    display: flex;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+    font-weight: bold;
+  }
+  &__nameArea {
+    display: flex;
+    padding-left: 17.25rem;
+    padding-right: 17.25rem;
+    margin-bottom: 1.5rem;
+  }
+  &__name-label {
+    display: flex;
+    align-self: center;
+    color: $color-silver;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  &__mo-img {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__mo-input {
+    display: flex;
+    width: 14rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    border-color: $primary-color;
+    width: 100%;
+  }
+  &__text-area {
+    width: 100%;
+    padding-left: 21.5rem;
+    padding-right: 17.25rem;
+  }
+  &__comment-lable {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  &__comment-text {
+    display: flex;
+    width: 100%;
+    border-radius: 0.3rem;
+    padding-left: 1rem;
+    background-color: $color-alabaster;
+  }
+  &__submit-btnDiv {
+    display: flex;
+    width: 100%;
+    padding-left: 18.75rem;
+  }
+}

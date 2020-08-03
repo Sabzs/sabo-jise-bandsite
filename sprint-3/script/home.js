@@ -3,17 +3,16 @@ const userForm = document.getElementById("userForm");
 
 
 // append to DOM, param expected is an array: messageArr
-function appendComments(messageArr) {
+function appendComments(commentsArr) {
     comments.innerHTML = "";
 
     // sort the array before appending to the DOM
-    const sortedArry = messageArr.sort(function (a, b) {
+    const sortedArry = commentsArr.sort(function (a, b) {
         return b.timestamp - a.timestamp;
     });
 
     // loop through sorted array and append to the DOM
     for (let i = 0; i < sortedArry.length; i++) {
-
         const commentsInfoDiv = document.createElement("div");
         commentsInfoDiv.classList.add("main__comment-info");
 
@@ -29,25 +28,19 @@ function appendComments(messageArr) {
         nameDateDiv.classList.add("main__nameDate");
 
         // ===================ARRAY OF OBJECTS ====================================//
-
         const commentName = document.createElement("p");
         commentName.classList.add("main__userName");
-        // commentName.innerText = element.name;
         commentName.innerText = sortedArry[i].name;
 
         const commentTime = document.createElement("p");
         commentTime.classList.add("main__userTime");
-        // commentTime.innerText = element.timestamp;
         commentTime.innerText = sortedArry[i].timestamp;
 
-        // create a <p> tag for the comment description
         const commentDescription = document.createElement("p");
         commentDescription.classList.add("main__userText");
-        // commentDescription.innerText = element.comment;
         commentDescription.innerText = sortedArry[i].comment;
 
         //====================== APENDDING SECTION =============================//
-
         commentsInfoDiv.appendChild(circleDiv);
         commentsInfoDiv.appendChild(userCommentsDiv);
 
@@ -86,24 +79,24 @@ function postComment(postObj) {
             console.log(response)
             getComments();
         }).catch((error) => { console.log(error) })
-    // getComments();
+
 }
 userForm.reset();
 
 
-// function to fetch data and call appendMessages(response.data) sending response.data as an arg
+// function to fetch data and call appendComments(response.data) sending response.data as an arg
 function getComments() {
     axios
         .get(
             `https://project-1-api.herokuapp.com/comments?api_key=812f588e-483e-4c64-b13d-437c4e8554e5`
         )
         .then(function (response) {
-            console.log(response); // inspect api response
+            console.log(response);
             appendComments(response.data);
         })
         .catch(function (error) {
             console.log(error);
         });
 }
-// // call function to load API data and append data to DOM
+// // call function to load API data and append to DOM
 getComments();

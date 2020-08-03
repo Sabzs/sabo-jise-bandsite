@@ -1,0 +1,103 @@
+@import "./global-variables";
+
+//=======================================
+
+@mixin navbar-mobile {
+  .navbar {
+    @include flexDirection(column);
+    width: 100%;
+    height: 5rem;
+    padding-top: 3%;
+    background: $primary-color;
+    color: $secondary-color;
+    &__logo {
+      display: flex;
+      align-self: center;
+    }
+    &__logo-img {
+      display: flex;
+    }
+    &__list {
+      @include flex-justify(center);
+      height: 65%;
+      padding-left: 0;
+      margin: 0;
+    }
+    &__items {
+      @include flex-justify(center);
+      width: 10rem;
+    }
+    &__items-link {
+      display: flex;
+      @include aTags-stns;
+      @include fonts(0.81rem, 1.12rem, normal);
+      @include flex-justify(center);
+      align-items: center;
+      width: 5rem;
+      height: 100%;
+      &:hover {
+        cursor: pointer;
+        color: $color-hoverItems;
+        border-bottom: 3px solid $secondary-color;
+      }
+      &:active {
+        color: $color-active;
+      }
+    }
+  }
+}
+
+@mixin navbar-tablet {
+  .navbar {
+    @include flexDirection(row);
+    width: 100%;
+    height: 5rem;
+    padding-top: 0;
+    padding-left: 1.5rem;
+    &__logo {
+      display: flex;
+    }
+    &__logo-img {
+      display: flex;
+    }
+    &__list {
+      justify-content: space-around;
+      height: 100%;
+      width: 40%;
+      padding-top: 0;
+    }
+    &__items {
+      display: flex;
+      width: 5rem;
+      height: 100%;
+    }
+    &__items-link {
+      display: flex;
+      @include aTags-stns;
+      @include fonts(0.875rem, 1.375rem, normal);
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@mixin navbar-desktop {
+  .navbar {
+    display: flex;
+    width: 100%;
+    padding-left: 0;
+    &__logo {
+      display: flex;
+      padding-left: 11.25rem;
+      margin-right: 3.5rem;
+    }
+    &__list {
+      @include flex-justify(flex-start);
+    }
+    &__items {
+      @include flex-justify(flex-start);
+      margin-right: 3.5rem;
+    }
+  }
+}
