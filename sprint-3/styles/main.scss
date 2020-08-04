@@ -70,7 +70,7 @@
     &__quote-author {
       display: flex;
       @include fonts(0.875rem, 1.37rem, bold);
-      @include margin-reset;
+      @include clear-margin;
     }
     &__bio {
       @include flexDirection(column);
@@ -89,7 +89,7 @@
       display: flex;
       @include fonts(0.81rem, 1.12rem, normal);
       width: 100%;
-      @include margin-reset;
+      @include clear-margin;
       &--pd-right {
         padding-bottom: 1.5rem;
       }

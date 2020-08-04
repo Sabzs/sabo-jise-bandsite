@@ -36,6 +36,7 @@ function appendComments(commentsArr) {
         commentTime.classList.add("main__userTime");
         commentTime.innerText = sortedArry[i].timestamp;
 
+
         const commentDescription = document.createElement("p");
         commentDescription.classList.add("main__userText");
         commentDescription.innerText = sortedArry[i].comment;

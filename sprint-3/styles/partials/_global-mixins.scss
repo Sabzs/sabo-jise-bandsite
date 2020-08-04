@@ -18,19 +18,11 @@
   }
 }
 
-// various TAGS resets //
+// additional padding/margin resets //
 @mixin clear-margin {
-  // margin-top: 0;
-  // margin-bottom: 0;
-  // margin-left: 0;
-  // margin-right: 0;
   margin: 0px 0px 0px 0px;
 }
 @mixin clear-padding {
-  // padding-top: 0;
-  // padding-bottom: 0;
-  // padding-left: 0;
-  // padding-right: 0;
   padding: 0px 0px 0px 0px;
 }
 
@@ -100,6 +92,7 @@
     @include fonts(0.81rem, 1.12rem, normal);
     @include clear-margin;
   }
+
   &__email {
     display: flex;
     @include fonts(0.81rem, 1.12rem, normal);
