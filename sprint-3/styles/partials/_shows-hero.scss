@@ -26,8 +26,7 @@
       @include flexDirection(column);
     }
     &__headerIntro {
-      display: flex;
-      flex-direction: column;
+      @include flexDirection(column);
       margin-top: 4rem;
       margin-bottom: 4rem;
     }
@@ -42,7 +41,7 @@
       @include fonts(1.5rem, 2rem, bold);
       color: $secondary-color;
       width: 72%;
-      @include margin-reset;
+      @include clear-margin;
     }
     &__musicPlayer {
       display: flex;
@@ -69,8 +68,7 @@
       padding-bottom: 10%;
     }
     &__header {
-      flex-direction: column;
-      display: flex;
+      @include flexDirection(column);
       height: 100%;
       width: 80%;
       padding-left: 1.5rem;
@@ -94,8 +92,7 @@
       height: auto;
     }
     &__musicPlayer {
-      display: flex;
-      justify-content: flex-start;
+      @include flex-justify(flex-start);
       margin-left: 1.5rem;
       width: 60%;
       margin-left: 0;
@@ -119,8 +116,7 @@
       width: 100%;
     }
     &__header {
-      display: flex;
-      flex-direction: row;
+      @include flexDirection(row);
       align-items: center;
       width: 100%;
       height: 80%;
@@ -140,8 +136,7 @@
       width: 95%;
     }
     &__musicPlayer {
-      display: flex;
-      justify-content: flex-start;
+      @include flex-justify(flex-start);
       margin-left: 1.5rem;
       width: 71%;
       height: 25%;

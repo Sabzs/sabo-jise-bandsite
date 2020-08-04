@@ -19,15 +19,14 @@
 }
 
 // various TAGS resets //
-@mixin margin-reset {
+@mixin clear-margin {
   // margin-top: 0;
   // margin-bottom: 0;
   // margin-left: 0;
   // margin-right: 0;
-
   margin: 0px 0px 0px 0px;
 }
-@mixin padding-reset {
+@mixin clear-padding {
   // padding-top: 0;
   // padding-bottom: 0;
   // padding-left: 0;
@@ -50,6 +49,11 @@
 @mixin flex-justify($justify) {
   display: flex;
   justify-content: $justify;
+}
+@mixin flex-justifyDirection($justify, $direction) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction;
 }
 @mixin flex-alignItems($align) {
   display: flex;
@@ -79,12 +83,12 @@
   &__name {
     display: flex;
     @include fonts(0.81rem, 1.12rem, bold);
-    @include margin-reset;
+    @include clear-margin;
   }
   &__company {
     display: flex;
     @include fonts(0.81rem, 1.12rem, bold);
-    @include margin-reset;
+    @include clear-margin;
   }
   &__address-cont {
     @include flexDirection(column);
@@ -94,7 +98,7 @@
   &__address {
     display: flex;
     @include fonts(0.81rem, 1.12rem, normal);
-    @include margin-reset;
+    @include clear-margin;
   }
   &__email {
     display: flex;
